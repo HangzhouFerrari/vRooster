@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+    body {
+      margin: 0 auto;
+      background-image: linear-gradient(180deg,rgb(10, 10, 10) 0%, rgb(10, 8, 18) 100%);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px; /* verhoogd basis lettergrootte */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: auto;
+      max-width: 1500px;
+      text-align: center;
+    }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+.titels {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  width: 100%;
+  height: 70px;
+  background-image: url('Assets/donkere modus/branding/logo_mainb_svg.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;                                                              
+}
+
+    .glow-item {
+      width: 100%;
+      max-width: 2000px;
+      height: auto;
+      transform: scale(2.0);
+    }
+
+    .title {
+      color: #ffffff;
+      font-size: 20px;
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+    }
+
+    .subtitle {
+       position: relative;
+       z-index: 2;
+       color: #e9e9e9;
+       opacity: 0.8;
+       font-size: 8px; /* grotere subtitel */
+       text-align: left; /* subtitel rechts uitlijnen */
+       margin-top: -2px; /* kleine ruimte onder de titel */
+       margin-left: 10px;
+    }
+
+    h1 {
+      font-weight: 800;
+      margin: 0;
+      /* geen font-size override hier zodat .title bepaalt */
+    }
+
+    h2 {
+      font-weight: 400;
+      margin: 0;
+    }
+
+.secondary-content {
+  justify-content: left;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  align-items: left; /* center zodat beide grids gecentreerd zijn */
+}
+
+/* Weekdays en grid gebruiken exact dezelfde kolomopzet zodat ze verticaal uitgelijnd zijn */
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* gelijke kolommen als .grid */
+  text-align: center;
+  color: #e9e9e9;
+  font-weight: 600;
+  font-size: 16px; /* iets groter tekst */
+  column-gap: 40px; /* dezelfde kolomafstand als .grid */
+  width: 100%;
+  max-width: 1400px; /* iets breder zodat alles groter oogt */
+  box-sizing: border-box;
+  padding: 0 12px;
+  margin: 20px auto;
+  margin-bottom: -10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* gelijke kolommen als .weekdays */
+  gap: 18px; /* lichte toename in spacing */
+  column-gap: 40px; /* gelijke kolomafstand als .weekdays */
+  width: 100%;
+  max-width: 1400px; /* gelijke max-breedte als .weekdays */
+  margin: 12px auto 0 auto;
+  justify-content: left;
+  box-sizing: border-box;
+  padding: 0 12px;
+  margin: 20px auto;
+  /* geen grid-auto-rows zodat aspect-ratio van items bepaalt hoogte */
+}
+
+.grid-item {
+  position: relative;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: clamp(24px, 32px, 40px);
+  box-shadow:
+    0 0px 10px rgba(0, 5, 48, 0.1),
+    inset 0 1px 1px rgba(255, 255, 255, 0.9);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 12px;
+  color: #333;
+  transition: all 0.3s cubic-bezier(0,0,.47,1.15);
+  overflow: hidden;
+  will-change: transform, backdrop-filter;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+@media (max-width: 1300px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+  }
+  
+  .weekdays {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+  }
+  
+  .grid-item {
+    border-radius: clamp(8px, 2vw, 48px);
+  }
+  
+  .grid-item .item-img {
+    width: clamp(24px, 8vw, 80px);
+    height: clamp(24px, 8vw, 80px);
+  }
+  
+  .grid-item .item-title {
+    font-size: 18px;
+  }
+  
+  .grid-item .item-subtitle {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 12px;
+  }
+  
+  .weekdays {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 12px;
+  }
+  
+  .grid-item .item-img {
+    width: clamp(20px, 6vw, 30px);
+    height: clamp(20px, 6vw, 30px);
+  }
+  
+  .grid-item .item-title {
+    font-size: 14px;
+  }
+  
+  .grid-item .item-subtitle {
+    font-size: 8px;
+  }
+}
+
+
+/* afbeelding linksboven (max 60x60, responsive) */
+.grid-item .item-img {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: clamp(32px, 10vw, 50px);
+  height: clamp(32px, 10vw, 50px);
+  object-fit: cover;
+  border-radius: 16px;
+  z-index: 2;
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8) inset, 
+              -1px -1px 1px rgba(255, 255, 255, 0.4) inset;
+}
+
+/* meta onderin links */
+.grid-item .item-meta {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  right: 12px; /* zorgt dat lange titels afbreken */
+  text-align: left;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.grid-item .item-title {
+  font-size: 24px; /* kleiner dan pagina (sub)titel */
+  font-weight: 800;
+  color: #0b1220;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.grid-item .item-subtitle {
+  font-size: 12px;
+  color: rgba(11,18,32,0.65);
+  line-height: 1.1;
+}
+
+.grid-item[data-clickable="true"]:hover {
+  transform: scale(1.1);
+  z-index: 3;
+  transition: all 0.1s cubic-bezier(0,0,.47,1.15);
+  filter: brightness(1.3);
+  background: rgba(255, 255, 255, 1);
+}
+
+.grid-item[data-clickable="false"]:hover {
+  z-index: 3;
+  transition: all 0.1s cubic-bezier(0,0,.47,1.15);
+  filter: brightness(0.9);
+}
+
+.weekdays div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2,6,23,0.7);
+  backdrop-filter: blur(4px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease;
+  z-index: 9999;
+  perspective: 1000px;
+}
+.overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+.overlay-panel {
+  background: #f2f1f7;
+  box-shadow: -1px -1px 0 0 rgba(255, 255, 255, 0.30) inset,
+              1px 1px 0 0 rgba(255, 255, 255, 0.50) inset;
+  color: #0c0c0c;
+  width: 100%;
+  padding: 20px 20px;
+  transform: scale(0.2) rotateX(-50deg) rotateY(0deg);
+  border-radius: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform .5s ease, border-radius .5s ease, opacity .5s ease;
+}
+.overlay.active .overlay-panel { transform: scale(1.0) rotateX(0deg) rotateY(0deg); border-radius: 0px; transition: transform .5s ease, border-radius .5s ease, opacity .5s ease; }
+.overlay-header { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; text-align:left; margin-top:10px; }
+.overlay-title { display: flex; align-items: center; gap: 8px; font-family: 'DM Sans', sans-serif; font-size: clamp(32px, 64px, 82px); font-weight: 800; margin:0; margin-bottom: 20px; }
+.overlay-subtitle { font-family: 'DM Sans', sans-serif; font-size: 24px; color: rgba(0, 0, 0, 0.8); margin-top:6px; }
+.overlay-body { margin-top: 12px; display:flex; gap:20px; flex-wrap:wrap; height: 100px; margin-bottom: 30px;}
+.overlay-close {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.50) 100%);
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9) inset, 
+              -1px -1px 1px rgba(255, 255, 255, 0.9) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'DM Sans', sans-serif;
+  border-radius: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+  height: 44px;
+  width: auto;
+  padding: 0 16px;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.overlay-close:hover {
+    background: rgba(255, 255, 255, 0.7);
+    transform: scale(1.02);
+}
+
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+}
+.overlay-btn {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.50) 100%);
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9) inset, 
+              -1px -1px 1px rgba(255, 255, 255, 0.9) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.1);
+  color: #000;
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.3s cubic-bezier(0,0,.47,1.15);
+  width: 150px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.overlay-btn-quizlet {
+  background: linear-gradient(180deg, rgba(66, 85, 255, 1.0) 0%, rgba(66, 85, 255, 0.80) 100%);
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6) inset, 
+              -1px -1px 1px rgba(255, 255, 255, 0.6) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.3s cubic-bezier(0,0,.47,1.15);
+  width: 150px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.rechts-content {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* afstand tussen theme-knop en navigatie */
+  justify-content: flex-start;
+  padding: 10px 20px;
+}
+
+.navigatie {
+  display: flex;
+  gap: 10px;
+  position: relative;
+  z-index: 2;
+  margin-right: -20px;
+}
+
+.overlay-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+  filter: brightness(1.2);
+  transform: scale(1.1);
+  transition: all 0.1s cubic-bezier(0,0,.47,1.15);
+  color: #000
+  
+}
+
+.overlay-btn-quizlet:hover {
+  filter: brightness(1.4);
+  transform: scale(1.1);
+  transition: all 0.1s cubic-bezier(0,0,.47,1.15);
+  text-decoration: none !important;
+}
+
+.boven-content {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: center; /* center de header-row op het scherm */
+  align-items: center;     /* verticale uitlijning: titels en knoppen op 1 lijn */
+  padding: 5px 5px;      /* ruimte rondom, pas naar smaak */
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  margin: 20px auto; /* aangepast: centreer boven-content horizontaal */
+}
+
+.thema-toggle {
+  position: relative;
+  z-index: 2;
+  width: 44px;              /* vierkant */
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.20) 100%);
+  backdrop-filter: blur(2px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+  box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9) inset, 
+              -1px -1px 2px rgba(255, 255, 255, 0.9) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.1);
+  color: #333;
+  transition: 0.3s ease;
+}
+
+.thema-toggle:hover {
+  background: rgba(255, 255, 255, 0.7);
+  transform: scale(1.05);
+}
+
+/* SVG netjes schalen */
+.thema-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+.probleem-knop {
+    padding: 8px 16px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.50) 100%);
+    color: #333333;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: 'Red Hat Display', sans-serif;
+    transition: all 0.3s cubic-bezier(0,0,.47,1.15);
+    z-index: 2;
+    height: 44px;
+    width: auto;
+    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9) inset, 
+              -1px -1px 1px rgba(255, 255, 255, 0.9) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+  }
+  
+  .probleem-knop:hover {
+    background: rgba(255, 255, 255, 0.7);
+    transform: scale(1.02);
+}
+
+/* nieuwe helper-klassen: zorg dat het 'glas' écht achter de huidige knop zit */
+.navigatie.glas-achter-current .nav-knop,
+.navigatie.glas-achter-current .nav-knop-current {
+  position: relative; /* nodig zodat z-index op knoppen werkt */
+}
+
+.navigatie.glas-achter-current .nav-knop-current {
+  z-index: 5; /* current knop boven het glas */
+}
+
+.navigatie.glas-achter-current .navigatie-glas {
+  z-index: -5; /* glas achter de current knop maar voor de achtergrond */
+}
+
+.main-content {
+  justify-content: flex-start;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  align-items: center; /* centreer verticaal binnen main-content (links gepositioneerd) */
+  margin: 20px auto;
+}
+
+/* lijst: 1 kolom, 11 rijen (automatisch door aantal items) */
+.theorieen-lijst {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;               /* geen ruimte tussen rijen */
+  width: 100%;
+  max-width: 200px;
+  margin: 0;
+  padding: 0 12px;
+  box-sizing: border-box;
+  height: auto;
+}
+
+/* lijst-item: klikbare rij met kleine vierkante afbeelding en titel */
+.lijst-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 12px;
+  margin: 0;                 /* geen verticale marge */
+  background:  linear-gradient(180deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.20) 100%);
+  border-radius: 5px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform .12s ease, box-shadow .12s ease;
+  box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9) inset, 
+              -1px -1px 2px rgba(255, 255, 255, 0.9) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.lijst-item:hover {
+  transform: scale(1.05);
+  z-index: 3;
+  transition: all 0.1s cubic-bezier(0,0,.47,1.15);
+  filter: brightness(1.3);
+  background: rgba(255, 255, 255, 1);
+}
+
+/* afbeelding */
+.lijst-img {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex: 0 0 24px;
+  box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9) inset, 
+              -1px -1px 2px rgba(255, 255, 255, 0.9) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* titel */
+.lijst-titel {
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  color: #0b1220;
+}
+
+/* kleine responsive aanpassing */
+@media (max-width: 900px) {
+  .main-content { align-items: flex-start; }
+  .theorieen-lijst { max-width: 100%; }
+}
+
+.mededeling {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}

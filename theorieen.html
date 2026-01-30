@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CTP1 theorieën | Velios</title>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" id="themeStylesheet" href="light.css"/>
+  <link rel="icon" type="image/svg+xml" href="favicon.png">
+</head>
+<style>
+  #loading-overlay{
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: #1d1d1d; /*zelfde kleur als dark.css body*/
+      color: #fff;
+      font-family: 'Red Hat Display', sans-serif;
+      font-size: 22px;
+      z-index: 999;
+      opacity: 1;
+      transition: opacity .4s ease;
+      pointer-events: none;
+    }
+
+    
+    .glow-group {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(-30%);
+      width: 100%;
+      max-width: 700px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      will-change: filter;
+      opacity: 0.6;
+      z-index: 0;
+      pointer-events: none;
+    }
+   .main-content { margin-top: 0; }
+</style>
+<script>
+window.addEventListener('load', () => {
+  const glas = document.querySelector('.navigatie-glas');
+  const nav = document.querySelector('.navigatie');
+  const knoppen = document.querySelectorAll('.navigatie .nav-knop');
+  let current = document.querySelector('.nav-knop-current');
+
+  if (!glas || !nav || !knoppen.length) return;
+
+  function moveGlassTo(el) {
+    const rect = el.getBoundingClientRect();
+    const parentRect = nav.getBoundingClientRect();
+    const x = rect.left - parentRect.left;
+    const y = rect.top - parentRect.top;
+    glas.style.left = `${x}px`;
+    glas.style.top = `${y}px`;
+    glas.style.width = `${rect.width}px`;
+    glas.style.height = `${rect.height}px`;
+  }
+
+  // Zet glas op de juiste plek bij het laden
+  if (current) moveGlassTo(current);
+
+  // Hover-effecten
+  knoppen.forEach(btn => {
+    btn.addEventListener('mouseenter', () => {
+      moveGlassTo(btn);
+      glas.classList.add('hover');
+    });
+    btn.addEventListener('mouseleave', () => {
+      moveGlassTo(current);
+      glas.classList.remove('hover');
+    });
+  });
+
+  // Herpositioneer bij resize (voor responsieve pagina)
+  window.addEventListener('resize', () => {
+    if (current) moveGlassTo(current);
+  });
+});
+</script>
+
+</script>
+<body>
+    <div id="loading-overlay">Laden...</div>
+    <div class="glow-group">
+    <img class="glow-item" src="Assets/glow.png">
+  </div>
+  <div class="boven-content">
+    <div class="container">
+     <div class="title">
+        <h1>Toetsweek 1</h1>
+     </div>
+     <div class="subtitle">
+        <h2>Klas 3 25-26</h2>
+     </div>
+   </div>
+   <div class="rechts-content">
+    <button class="probleem-knop" data-clickable="true" data-overlay="overlay-14">Wordt de pagina niet goed weergegeven?</button>
+    <div class="navigatie glas-achter-current">
+      <a href="nu.html" style="z-index: 0;"><button class="nav-knop" style="z-index:0;">Rooster</button></a>
+      <button class="nav-knop-current">Theorieën</button>
+      <div class="navigatie-glas"></div>
+      <div class="navigatie-achtergrond"></div>
+    </div>
+   </div>
+  </div>
+  <div class="main-content">
+    <div class="theorieen-lijst">
+        <a class="lijst-item" href="duits.html" style="border-radius: 30px 30px 5px 5px;">
+          <img class="lijst-img" src="Assets/Icons/duits.png" alt="Duits">
+          <div class="lijst-titel">Duits</div>
+        </a>
+        <a class="lijst-item" href="grieks.html">
+          <img class="lijst-img" src="Assets/Icons/grieks.png" alt="Grieks">
+          <div class="lijst-titel">Grieks</div>
+        </a>
+        <a class="lijst-item" href="natuurkunde.html">
+          <img class="lijst-img" src="Assets/Icons/natuurkunde.png" alt="Natuurkunde">
+          <div class="lijst-titel">Natuurkunde</div>
+        </a>
+        <a class="lijst-item" href="engels.html">
+          <img class="lijst-img" src="Assets/Icons/engels.png" alt="Engels">
+          <div class="lijst-titel">Engels</div>
+        </a>
+        <a class="lijst-item" href="scheikunde.html">
+          <img class="lijst-img" src="Assets/Icons/scheikunde.png" alt="Scheikunde">
+          <div class="lijst-titel">Scheikunde</div>
+        </a>
+        <a class="lijst-item" href="vrij.html">
+          <img class="lijst-img" src="Assets/Icons/biologie.png" alt="Vrij">
+          <div class="lijst-titel">biologie</div>
+        </a>
+        <a class="lijst-item" href="aardrijkskunde.html">
+          <img class="lijst-img" src="Assets/Icons/aardrijkskunde.png" alt="Aardrijkskunde">
+          <div class="lijst-titel">Aardrijkskunde</div>
+        </a>
+        <a class="lijst-item" href="latijn.html">
+          <img class="lijst-img" src="Assets/Icons/latijn.png" alt="Latijn">
+          <div class="lijst-titel">Latijn</div>
+        </a>
+        <a class="lijst-item" href="wiskunde.html">
+          <img class="lijst-img" src="Assets/Icons/wiskunde.png" alt="Wiskunde">
+          <div class="lijst-titel">Wiskunde</div>
+        </a>
+        <a class="lijst-item" href="nederlands.html">
+          <img class="lijst-img" src="Assets/Icons/nederlands.png" alt="Nederlands">
+          <div class="lijst-titel">Nederlands</div>
+        </a>
+        <a class="lijst-item" href="geschiedenis.html" style="border-radius: 5px 5px 30px 30px;">
+          <img class="lijst-img" src="Assets/Icons/geschiedenis.png" alt="Geschiedenis">
+          <div class="lijst-titel">Geschiedenis</div>
+        </a>
+    </div>
+    <div class="mededeling">Klik op een vak om de theorie ervan te kunnen lezen!</div>
+  </div>
+</body>
+</html>

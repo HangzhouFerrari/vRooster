@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CTP1 rooster | Velios</title>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" id="themeStylesheet" href="light.css"/>
+  <link rel="icon" type="image/svg+xml" href="favicon.png">
+</head>
+<style>
+  #loading-overlay{
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: #1d1d1d; /*zelfde kleur als dark.css body*/
+      color: #fff;
+      font-family: 'Red Hat Display', sans-serif;
+      font-size: 22px;
+      z-index: 999;
+      opacity: 1;
+      transition: opacity .4s ease;
+      pointer-events: none;
+    }
+</style>
+<script>
+  if (window.innerWidth < 800) {
+     window.location.href = "mobiel.html";
+        }
+</script>
+<body>
+   <div id="loading-overlay">Laden...</div>
+  <div class="boven-content">
+    <div class="container">
+     <a href="nu.html"></a><div class="logo"></div></a>
+   </div>
+   <div class="rechts-content">
+    <button class="probleem-knop" data-clickable="true" data-overlay="overlay-14">Wordt de pagina niet goed weergegeven?</button>
+    <div class="thema-toggle" id="themeToggle">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="29.997" viewBox="0 0 30 29.997">
+        <path id="Path_1" data-name="Path 1" d="M9.949,29.147l-.01-.024A15,15,0,0,1,15,0c.694,0,.808,1.04.215,1.4a9.754,9.754,0,0,0-3.007,13.864l-.014.017a9.786,9.786,0,0,0,16.4-.55c.362-.6,1.405-.481,1.405.216a15.064,15.064,0,0,1-20.051,14.2Z" fill="rgba(0,0,0,0.9)"/>
+      </svg>
+    </div>
+   </div>
+  </div>
+<div class="secondary-content">
+  <div class="titels">
+     <div class="title">
+        <h1>Toetsweek 2.</h1>
+     </div>
+     <div class="subtitle">
+        <h2>Klas 3 25-26</h2>
+     </div>
+  </div>
+  <div class="weekdays">
+    <div>13-2<br><br>Vrijdag</div>
+    <div>14-2<br>Zaterdag</div>
+    <div>15-2<br>Zondag</div>
+    <div>16-2<br>Maandag</div>
+    <div>17-2<br>Dinsdag</div>
+    <div>18-2<br>Woensdag</div>
+    <div>19-2<br>Donderdag</div>
+    <div>20-2<br>Vrijdag</div>
+  </div>
+  <div class="grid">
+    <!-- vervang lege items door items met unieke afbeelding (seed) en metadata -->
+    <div class="grid-item" data-overlay="overlay-1" data-clickable="true">
+      <div class="item-img" style="background: url(Assets/Icons/scheikunde.png) center/cover no-repeat" alt="Scheikunde"></div>
+      <div class="item-meta">
+        <div class="item-title">Sk</div>
+        <div class="item-subtitle">11:20-12:10</div>
+      </div>
+    </div>
+    <div class="grid-item" data-clickable="false">
+      <div class="item-img" style="background: url(Assets/Icons/vrij.png) center/cover no-repeat" alt="vrij"></div>
+      <div class="item-meta">
+        <div class="item-title">Vrij</div>
+        <div class="item-subtitle">Weekend</div>
+      </div>
+    </div>
+    <div class="grid-item" data-clickable="false">
+      <div class="item-img" style="background: url(Assets/Icons/vrij.png) center/cover no-repeat" alt="vrij"></div>
+      <div class="item-meta">
+        <div class="item-title">Vrij</div>
+        <div class="item-subtitle">Weekend</div>
+      </div>
+    </div>
+    <div class="grid-item" data-overlay="overlay-2" data-clickable="true">
+      <div class="item-img" style="background: url(Assets/Icons/latijn.png) center/cover no-repeat" alt="Latijn"></div>
+      <div class="item-meta">
+        <div class="item-title">La</div>
+        <div class="item-subtitle">11:20-12:10</div>
+      </div>
+    </div>
+    <div class="grid-item" data-overlay="overlay-3" data-clickable="true">
+      <div class="item-img" style="background: url(Assets/Icons/grieks.png) center/cover no-repeat" alt="Grieks"></div>
+      <div class="item-meta">
+        <div class="item-title">Gr</div>
+        <div class="item-subtitle">11:20-12:10</div>
+      </div>
+    </div>
+    <div class="grid-item" data-overlay="overlay-4" data-clickable="true">
+      <div class="item-img" style="background: url(Assets/Icons/aardrijkskunde.png) center/cover no-repeat" alt="Aardrijkskunde"></div>
+      <div class="item-meta">
+        <div class="item-title">Ak</div>
+        <div class="item-subtitle">11:20-12:10</div>
+      </div>
+    </div>
+    <div class="grid-item" data-overlay="overlay-5" data-clickable="true">
+      <div class="item-img" style="background: url(Assets/Icons/Nederlands.png) center/cover no-repeat" alt="Nederlands"></div>
+      <div class="item-meta">
+        <div class="item-title">Ne</div>
+        <div class="item-subtitle">11:20-12:10</div>
+      </div>
+    </div>
+    <div class="grid-item" data-overlay="overlay-6" data-clickable="true">
+      <div class="item-img" style="background: url(Assets/Icons/geschiedenis.png) center/cover no-repeat" alt="Geschiedenis"></div>
+      <div class="item-meta">
+        <div class="item-title">Gs</div>
+        <div class="item-subtitle">11:20-12:10</div>
+      </div>
+    </div>
+    <div class="grid-item" data-overlay="overlay-7" data-clickable="true">
+      <div class="item-img" style="background: url(Assets/Icons/frans.png) center/cover no-repeat" alt="Frans"></div>
+      <div class="item-meta">
+        <div class="item-title">Fa</div>
+        <div class="item-subtitle">12:40-13:30</div>
+      </div>
+    </div>
+    <div class="grid-item" data-clickable="false">
+      <div class="item-img" style="background: url(Assets/Icons/vrij.png) center/cover no-repeat" alt="Vrij"></div>
+      <div class="item-meta">
+        <div class="item-title">Vrij</div>
+        <div class="item-subtitle">Weekend</div>
+      </div>
+    </div>
+    <div class="grid-item" data-clickable="false">
+      <div class="item-img" style="background: url(Assets/Icons/vrij.png) center/cover no-repeat" alt="Vrij"></div>
+      <div class="item-meta">
+        <div class="item-title">Vrij</div>
+        <div class="item-subtitle">Weekend</div>
+      </div>
+    </div>
+    <div class="grid-item" data-overlay="overlay-8" data-clickable="true">
+      <div class="item-img" style="background: url(Assets/Icons/duits.png) center/cover no-repeat" alt="Duits"></div>
+      <div class="item-meta">
+        <div class="item-title">Du</div>
+        <div class="item-subtitle">12:40-13:30</div>
+      </div>
+    </div>
+    <div class="grid-item" data-overlay="overlay-9" data-clickable="true">
+      <div class="item-img" style="background: url(Assets/Icons/wiskunde.png) center/cover no-repeat" alt="Wiskunde"></div>
+      <div class="item-meta">
+        <div class="item-title">Wi</div>
+        <div class="item-subtitle">12:40-13:30</div>
+      </div>
+    </div>
+    <div class="grid-item" data-overlay="overlay-10" data-clickable="true">
+      <div class="item-img" style="background: url(Assets/Icons/economie.png) center/cover no-repeat" alt="Economie"></div>
+      <div class="item-meta">
+        <div class="item-title">Ec</div>
+        <div class="item-subtitle">12:30-13:30</div>
+      </div>
+    </div>
+    <div class="grid-item" data-overlay="overlay-11" data-clickable="true">
+      <div class="item-img" style="background: url(Assets/Icons/natuurkunde.png) center/cover no-repeat" alt="Natuurkunde"></div>
+      <div class="item-meta">
+        <div class="item-title">Na</div>
+        <div class="item-subtitle">12:40-13:30</div>
+      </div>
+    </div>
+    <div class="grid-item" data-overlay="overlay-12" data-clickable="true">
+      <div class="item-img" style="background: url(Assets/Icons/engels.png) center/cover no-repeat" alt="Engels"></div>
+      <div class="item-meta">
+        <div class="item-title">En</div>
+        <div class="item-subtitle">12:40-13:30</div>
+      </div>
+    </div>
+
+    <div id="overlay-1" class="overlay" aria-hidden="true">
+    <div class="overlay-panel" role="dialog" aria-modal="true">
+      <div class="overlay-content">
+        <div class="overlay-header">
+         <div>
+            <button class="overlay-close"><img src="Assets/Icons/ESC.png" style="height: 24px;"> Sluiten</button>
+            <div class="overlay-title"><img src="Assets/Icons/text/scheikunde.png" style="height: clamp(32px, 64px, 82px);">Scheikunde</div>
+            <div class="overlay-body"> 
+              <a href="https://drive.google.com/drive/folders/1DQheY3stIlYG0jMpNIV9teiAzZvrmw6P?usp=drive_link" target="_blank" rel="noopener noreferrer"><button class="overlay-btn-quizlet"><img src="Assets/Icons/overlay/Quizlet.png" style="height: 40px;">Quizlet</button></a>
+              <a href="https://drive.google.com/drive/folders/1DQheY3stIlYG0jMpNIV9teiAzZvrmw6P?usp=drive_link" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/Magister.png" style="height: 40px;">Magister</button></a>
+              <a href="https://google.com" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/bestanden.png" style="height: 40px;">Bestanden</button></a>
+            </div>
+            <div class="overlay-subtitle"><b>Vokabeln:</b> S43 (D-NL), S39, S41, S45 (D-NL, NL-D)<br><br><b>Grammatik:</b> 1A-1K (behalve o.v.t. regelmatige ww'en), 2A-2J (van p.vnw. alleen eerste naamval)<br><br><b>Lesen:</b> Texte Niveau B1</div>
+         </div>
+       </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="overlay-2" class="overlay" aria-hidden="true">
+    <div class="overlay-panel" role="dialog" aria-modal="true">
+      <div class="overlay-content">
+        <div class="overlay-header">
+         <div>
+            <button class="overlay-close"><img src="Assets/Icons/ESC.png" style="height: 24px;"> Sluiten</button>
+            <div class="overlay-title"><img src="Assets/Icons/text/latijn.png" style="height: clamp(32px, 64px, 82px);">Latijn</div>
+            <div class="overlay-body"> 
+              <a href="https://drive.google.com/drive/folders/1DQheY3stIlYG0jMpNIV9teiAzZvrmw6P?usp=drive_link" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/Magister.png" style="height: 40px;">Magister</button></a>
+              <a href="https://google.com" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/bestanden.png" style="height: 40px;">Bestanden</button></a>
+            </div>
+            <div class="overlay-subtitle"><b>Vokabeln:</b> S43 (D-NL), S39, S41, S45 (D-NL, NL-D)<br><br><b>Grammatik:</b> 1A-1K (behalve o.v.t. regelmatige ww'en), 2A-2J (van p.vnw. alleen eerste naamval)<br><br><b>Lesen:</b> Texte Niveau B1</div>
+         </div>
+       </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="overlay-3" class="overlay" aria-hidden="true">
+    <div class="overlay-panel" role="dialog" aria-modal="true">
+      <div class="overlay-content">
+        <div class="overlay-header">
+         <div>
+            <button class="overlay-close"><img src="Assets/Icons/ESC.png" style="height: 24px;"> Sluiten</button>
+            <div class="overlay-title"><img src="Assets/Icons/text/grieks.png" style="height: clamp(32px, 64px, 82px);">Grieks</div>
+            <div class="overlay-body"> 
+              <a href="https://drive.google.com/drive/folders/1DQheY3stIlYG0jMpNIV9teiAzZvrmw6P?usp=drive_link" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/Magister.png" style="height: 40px;">Magister</button></a>
+              <a href="https://google.com" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/bestanden.png" style="height: 40px;">Bestanden</button></a>
+            </div>
+            <div class="overlay-subtitle"><b>Vokabeln:</b> S43 (D-NL), S39, S41, S45 (D-NL, NL-D)<br><br><b>Grammatik:</b> 1A-1K (behalve o.v.t. regelmatige ww'en), 2A-2J (van p.vnw. alleen eerste naamval)<br><br><b>Lesen:</b> Texte Niveau B1</div>
+         </div>
+       </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="overlay-4" class="overlay" aria-hidden="true">
+    <div class="overlay-panel" role="dialog" aria-modal="true">
+      <div class="overlay-content">
+        <div class="overlay-header">
+         <div>
+            <button class="overlay-close"><img src="Assets/Icons/ESC.png" style="height: 24px;"> Sluiten</button>
+            <div class="overlay-title"><img src="Assets/Icons/text/aardrijkskunde.png" style="height: clamp(32px, 64px, 82px);">Aardrijkskunde</div>
+            <div class="overlay-body"> 
+              <a href="https://drive.google.com/drive/folders/1DQheY3stIlYG0jMpNIV9teiAzZvrmw6P?usp=drive_link" target="_blank" rel="noopener noreferrer"><button class="overlay-btn-quizlet"><img src="Assets/Icons/overlay/Quizlet.png" style="height: 40px;">Quizlet</button></a>
+              <a href="https://drive.google.com/drive/folders/1DQheY3stIlYG0jMpNIV9teiAzZvrmw6P?usp=drive_link" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/Magister.png" style="height: 40px;">Magister</button></a>
+              <a href="https://google.com" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/bestanden.png" style="height: 40px;">Bestanden</button></a>
+            </div>
+            <div class="overlay-subtitle"><b>Vokabeln:</b> S43 (D-NL), S39, S41, S45 (D-NL, NL-D)<br><br><b>Grammatik:</b> 1A-1K (behalve o.v.t. regelmatige ww'en), 2A-2J (van p.vnw. alleen eerste naamval)<br><br><b>Lesen:</b> Texte Niveau B1</div>
+         </div>
+       </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="overlay-5" class="overlay" aria-hidden="true">
+    <div class="overlay-panel" role="dialog" aria-modal="true">
+      <div class="overlay-content">
+        <div class="overlay-header">
+         <div>
+            <button class="overlay-close"><img src="Assets/Icons/ESC.png" style="height: 24px;"> Sluiten</button>
+            <div class="overlay-title"><img src="Assets/Icons/text/nederlands.png" style="height: clamp(32px, 64px, 82px);">Nederlands</div>
+            <div class="overlay-body"> 
+              <a href="https://drive.google.com/drive/folders/1DQheY3stIlYG0jMpNIV9teiAzZvrmw6P?usp=drive_link" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/Magister.png" style="height: 40px;">Magister</button></a>
+              <a href="https://google.com" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/bestanden.png" style="height: 40px;">Bestanden</button></a>
+            </div>
+            <div class="overlay-subtitle"><b>Vokabeln:</b> S43 (D-NL), S39, S41, S45 (D-NL, NL-D)<br><br><b>Grammatik:</b> 1A-1K (behalve o.v.t. regelmatige ww'en), 2A-2J (van p.vnw. alleen eerste naamval)<br><br><b>Lesen:</b> Texte Niveau B1</div>
+         </div>
+       </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="overlay-6" class="overlay" aria-hidden="true">
+    <div class="overlay-panel" role="dialog" aria-modal="true">
+      <div class="overlay-content">
+        <div class="overlay-header">
+         <div>
+            <button class="overlay-close"><img src="Assets/Icons/ESC.png" style="height: 24px;"> Sluiten</button>
+            <div class="overlay-title"><img src="Assets/Icons/text/geschiedenis.png" style="height: clamp(32px, 64px, 82px);">Geschiedenis</div>
+            <div class="overlay-body"> 
+              <a href="https://drive.google.com/drive/folders/1DQheY3stIlYG0jMpNIV9teiAzZvrmw6P?usp=drive_link" target="_blank" rel="noopener noreferrer"><button class="overlay-btn-quizlet"><img src="Assets/Icons/overlay/Quizlet.png" style="height: 40px;">Quizlet</button></a>
+              <a href="https://drive.google.com/drive/folders/1DQheY3stIlYG0jMpNIV9teiAzZvrmw6P?usp=drive_link" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/Magister.png" style="height: 40px;">Magister</button></a>
+              <a href="https://google.com" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/bestanden.png" style="height: 40px;">Bestanden</button></a>
+            </div>
+            <div class="overlay-subtitle"><b>Vokabeln:</b> S43 (D-NL), S39, S41, S45 (D-NL, NL-D)<br><br><b>Grammatik:</b> 1A-1K (behalve o.v.t. regelmatige ww'en), 2A-2J (van p.vnw. alleen eerste naamval)<br><br><b>Lesen:</b> Texte Niveau B1</div>
+         </div>
+       </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="overlay-7" class="overlay" aria-hidden="true">
+    <div class="overlay-panel" role="dialog" aria-modal="true">
+      <div class="overlay-content">
+        <div class="overlay-header">
+         <div>
+            <button class="overlay-close"><img src="Assets/Icons/ESC.png" style="height: 24px;"> Sluiten</button>
+            <div class="overlay-title"><img src="Assets/Icons/text/frans.png" style="height: clamp(32px, 64px, 82px);">Frans</div>
+            <div class="overlay-body"> 
+              <a href="https://drive.google.com/drive/folders/1DQheY3stIlYG0jMpNIV9teiAzZvrmw6P?usp=drive_link" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/Magister.png" style="height: 40px;">Magister</button></a>
+              <a href="https://google.com" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/bestanden.png" style="height: 40px;">Bestanden</button></a>
+            </div>
+            <div class="overlay-subtitle"><b>Vokabeln:</b> S43 (D-NL), S39, S41, S45 (D-NL, NL-D)<br><br><b>Grammatik:</b> 1A-1K (behalve o.v.t. regelmatige ww'en), 2A-2J (van p.vnw. alleen eerste naamval)<br><br><b>Lesen:</b> Texte Niveau B1</div>
+         </div>
+       </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="overlay-8" class="overlay" aria-hidden="true">
+    <div class="overlay-panel" role="dialog" aria-modal="true">
+      <div class="overlay-content">
+        <div class="overlay-header">
+         <div>
+            <button class="overlay-close"><img src="Assets/Icons/ESC.png" style="height: 24px;"> Sluiten</button>
+            <div class="overlay-title"><img src="Assets/Icons/text/duits.png" style="height: clamp(32px, 64px, 82px);">Duits</div>
+            <div class="overlay-body"> 
+              <a href="https://drive.google.com/drive/folders/1DQheY3stIlYG0jMpNIV9teiAzZvrmw6P?usp=drive_link" target="_blank" rel="noopener noreferrer"><button class="overlay-btn-quizlet"><img src="Assets/Icons/overlay/Quizlet.png" style="height: 40px;">Quizlet</button></a>
+              <a href="https://drive.google.com/drive/folders/1DQheY3stIlYG0jMpNIV9teiAzZvrmw6P?usp=drive_link" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/Magister.png" style="height: 40px;">Magister</button></a>
+              <a href="https://google.com" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/bestanden.png" style="height: 40px;">Bestanden</button></a>
+            </div>
+            <div class="overlay-subtitle"><b>Vokabeln:</b> S43 (D-NL), S39, S41, S45 (D-NL, NL-D)<br><br><b>Grammatik:</b> 1A-1K (behalve o.v.t. regelmatige ww'en), 2A-2J (van p.vnw. alleen eerste naamval)<br><br><b>Lesen:</b> Texte Niveau B1</div>
+         </div>
+       </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="overlay-9" class="overlay" aria-hidden="true">
+    <div class="overlay-panel" role="dialog" aria-modal="true">
+      <div class="overlay-content">
+        <div class="overlay-header">
+         <div>
+            <button class="overlay-close"><img src="Assets/Icons/ESC.png" style="height: 24px;"> Sluiten</button>
+            <div class="overlay-title"><img src="Assets/Icons/text/wiskunde.png" style="height: clamp(32px, 64px, 82px);">Wiskunde</div>
+            <div class="overlay-body"> 
+              <a href="https://drive.google.com/drive/folders/1DQheY3stIlYG0jMpNIV9teiAzZvrmw6P?usp=drive_link" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/Magister.png" style="height: 40px;">Magister</button></a>
+              <a href="https://google.com" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/bestanden.png" style="height: 40px;">Bestanden</button></a>
+            </div>
+            <div class="overlay-subtitle"><b>Vokabeln:</b> S43 (D-NL), S39, S41, S45 (D-NL, NL-D)<br><br><b>Grammatik:</b> 1A-1K (behalve o.v.t. regelmatige ww'en), 2A-2J (van p.vnw. alleen eerste naamval)<br><br><b>Lesen:</b> Texte Niveau B1</div>
+         </div>
+       </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="overlay-10" class="overlay" aria-hidden="true">
+    <div class="overlay-panel" role="dialog" aria-modal="true">
+      <div class="overlay-content">
+        <div class="overlay-header">
+         <div>
+            <button class="overlay-close"><img src="Assets/Icons/ESC.png" style="height: 24px;"> Sluiten</button>
+            <div class="overlay-title"><img src="Assets/Icons/text/economie.png" style="height: clamp(32px, 64px, 82px);">Economie</div>
+            <div class="overlay-body"> 
+              <a href="https://drive.google.com/drive/folders/1DQheY3stIlYG0jMpNIV9teiAzZvrmw6P?usp=drive_link" target="_blank" rel="noopener noreferrer"><button class="overlay-btn-quizlet"><img src="Assets/Icons/overlay/Quizlet.png" style="height: 40px;">Quizlet</button></a>
+              <a href="https://drive.google.com/drive/folders/1DQheY3stIlYG0jMpNIV9teiAzZvrmw6P?usp=drive_link" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/Magister.png" style="height: 40px;">Magister</button></a>
+              <a href="https://google.com" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/bestanden.png" style="height: 40px;">Bestanden</button></a>
+            </div>
+            <div class="overlay-subtitle"><b>Vokabeln:</b> S43 (D-NL), S39, S41, S45 (D-NL, NL-D)<br><br><b>Grammatik:</b> 1A-1K (behalve o.v.t. regelmatige ww'en), 2A-2J (van p.vnw. alleen eerste naamval)<br><br><b>Lesen:</b> Texte Niveau B1</div>
+         </div>
+       </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="overlay-11" class="overlay" aria-hidden="true">
+    <div class="overlay-panel" role="dialog" aria-modal="true">
+      <div class="overlay-content">
+        <div class="overlay-header">
+         <div>
+            <button class="overlay-close"><img src="Assets/Icons/ESC.png" style="height: 24px;"> Sluiten</button>
+            <div class="overlay-title"><img src="Assets/Icons/text/natuurkunde.png" style="height: clamp(32px, 64px, 82px);">Natuurkunde</div>
+            <div class="overlay-body"> 
+              <a href="https://drive.google.com/drive/folders/1DQheY3stIlYG0jMpNIV9teiAzZvrmw6P?usp=drive_link" target="_blank" rel="noopener noreferrer"><button class="overlay-btn-quizlet"><img src="Assets/Icons/overlay/Quizlet.png" style="height: 40px;">Quizlet</button></a>
+              <a href="https://drive.google.com/drive/folders/1DQheY3stIlYG0jMpNIV9teiAzZvrmw6P?usp=drive_link" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/Magister.png" style="height: 40px;">Magister</button></a>
+              <a href="https://google.com" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/bestanden.png" style="height: 40px;">Bestanden</button></a>
+            </div>
+            <div class="overlay-subtitle"><b>Vokabeln:</b> S43 (D-NL), S39, S41, S45 (D-NL, NL-D)<br><br><b>Grammatik:</b> 1A-1K (behalve o.v.t. regelmatige ww'en), 2A-2J (van p.vnw. alleen eerste naamval)<br><br><b>Lesen:</b> Texte Niveau B1</div>
+         </div>
+       </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="overlay-12" class="overlay" aria-hidden="true">
+    <div class="overlay-panel" role="dialog" aria-modal="true">
+      <div class="overlay-content">
+        <div class="overlay-header">
+         <div>
+            <button class="overlay-close"><img src="Assets/Icons/ESC.png" style="height: 24px;"> Sluiten</button>
+            <div class="overlay-title"><img src="Assets/Icons/text/engels.png" style="height: clamp(16px, 32px, 41px);">Engels</div>
+            <div class="overlay-body"> 
+              <a href="https://drive.google.com/drive/folders/1DQheY3stIlYG0jMpNIV9teiAzZvrmw6P?usp=drive_link" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/Magister.png" style="height: 40px;">Magister</button></a>
+              <a href="https://google.com" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/bestanden.png" style="height: 40px;">Bestanden</button></a>
+            </div>
+            <div class="overlay-subtitle"><b>Vokabeln:</b> S43 (D-NL), S39, S41, S45 (D-NL, NL-D)<br><br><b>Grammatik:</b> 1A-1K (behalve o.v.t. regelmatige ww'en), 2A-2J (van p.vnw. alleen eerste naamval)<br><br><b>Lesen:</b> Texte Niveau B1</div>
+         </div>
+       </div>
+      </div>
+    </div>
+  </div>
+
+<div id="overlay-14" class="overlay" aria-hidden="true">
+    <div class="overlay-panel" role="dialog" aria-modal="true">
+      <div class="overlay-content">
+        <div class="overlay-header">
+         <div>
+            <button class="overlay-close"><img src="Assets/Icons/ESC.png" style="height: 24px;"> Sluiten</button>
+            <div class="overlay-title"><img src="Assets/Icons/text/frans.png" style="height: clamp(32px, 64px, 82px);">Frans</div>
+            <div class="overlay-body"> 
+              <a href="https://drive.google.com/drive/folders/1DQheY3stIlYG0jMpNIV9teiAzZvrmw6P?usp=drive_link" target="_blank" rel="noopener noreferrer"><button class="overlay-btn-quizlet"><img src="Assets/Icons/overlay/Quizlet.png" style="height: 40px;">Quizlet</button></a>
+              <a href="https://drive.google.com/drive/folders/1DQheY3stIlYG0jMpNIV9teiAzZvrmw6P?usp=drive_link" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/Magister.png" style="height: 40px;">Magister</button></a>
+              <a href="https://google.com" target="_blank" rel="noopener noreferrer"><button class="overlay-btn"><img src="Assets/Icons/overlay/bestanden.png" style="height: 40px;">Bestanden</button></a>
+            </div>
+            <div class="overlay-subtitle"><b>Vokabeln:</b> S43 (D-NL), S39, S41, S45 (D-NL, NL-D)<br><br><b>Grammatik:</b> 1A-1K (behalve o.v.t. regelmatige ww'en), 2A-2J (van p.vnw. alleen eerste naamval)<br><br><b>Lesen:</b> Texte Niveau B1</div>
+         </div>
+       </div>
+      </div>
+    </div>
+  </div>
+<script>
+  // open/close helpers
+  const openOverlay = id => {
+    closeAllOverlays();
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.add('active');
+    el.setAttribute('aria-hidden', 'false');
+  };
+  const closeOverlay = el => {
+    if (!el) return;
+    el.classList.remove('active');
+    el.setAttribute('aria-hidden', 'true');
+  };
+  const closeAllOverlays = () => {
+    document.querySelectorAll('.overlay.active').forEach(o => closeOverlay(o));
+  };
+
+  // grid-item clicks open assigned overlay
+  document.querySelectorAll('.grid-item[data-overlay], .probleem-knop[data-overlay]').forEach(item => {
+    item.addEventListener('click', () => {
+      const target = item.dataset.overlay;
+      if (target) openOverlay(target);
+    });
+  });
+
+  // overlay internal buttons
+  document.querySelectorAll('.overlay').forEach(overlay => {
+    // close button
+    overlay.querySelectorAll('[data-close]').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        closeOverlay(overlay);
+      });
+    });
+    // clicking outside panel closes
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) closeOverlay(overlay);
+    });
+    // buttons that open other overlays
+    overlay.querySelectorAll('[data-open]').forEach(btn => {
+      btn.addEventListener('click', e => {
+        const target = btn.dataset.open;
+        if (target) openOverlay(target);
+      });
+    });
+  });
+
+  // ESC key closes
+  window.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeAllOverlays();
+  });
+
+  // zorg dat wanneer er op de class 'overlay-close' wordt geklikt, het overlay wordt gesloten
+  document.querySelectorAll('.overlay-close').forEach(button => {
+    button.addEventListener('click', () => {
+      const overlay = button.closest('.overlay');
+      closeOverlay(overlay);
+    });
+  });
+</script>
+<script>
+const glas = document.querySelector('.navigatie-glas');
+const nav = document.querySelector('.navigatie');
+const knoppen = document.querySelectorAll('.navigatie .nav-knop');
+let current = document.querySelector('.nav-knop-current');
+
+function moveGlassTo(el) {
+  const rect = el.getBoundingClientRect();
+  const parentRect = nav.getBoundingClientRect();
+  const x = rect.left - parentRect.left;
+  const y = rect.top - parentRect.top;
+  glas.style.left = `${x}px`;
+  glas.style.top = `${y}px`;
+  glas.style.width = `${rect.width}px`;
+  glas.style.height = `${rect.height}px`;
+}
+
+if (current) moveGlassTo(current);
+
+knoppen.forEach(btn => {
+  btn.addEventListener('mouseenter', () => {
+    moveGlassTo(btn);
+    glas.classList.add('hover'); // 👈 glas lichter/groter bij hover
+  });
+  btn.addEventListener('mouseleave', () => {
+    moveGlassTo(current);
+    glas.classList.remove('hover'); // 👈 terug naar normale kleur/grootte
+  });
+});
+</script>
+<script>
+(function () {
+  const toggle = document.getElementById('themeToggle');
+  const stylesheet = document.getElementById('themeStylesheet');
+
+  // gebruik currentColor zodat we makkelijk kunnen wisselen via CSS / inline style
+  const sunSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="29.997" viewBox="0 0 30 29.997"><path d="M9.949,29.147l-.01-.024A15,15,0,0,1,15,0c.694,0,.808,1.04.215,1.4a9.754,9.754,0,0,0-3.007,13.864l-.014.017a9.786,9.786,0,0,0,16.4-.55c.362-.6,1.405-.481,1.405.216a15.064,15.064,0,0,1-20.051,14.2Z" fill="currentColor"/></svg>';
+  const moonSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><path d="M-5771.8-6794.8v-1.4a1.046,1.046,0,0,1,1.044-1.047,1.047,1.047,0,0,1,1.047,1.047v1.4a1.046,1.046,0,0,1-1.047,1.046A1.045,1.045,0,0,1-5771.8-6794.8Zm10.17-3.348-.548-.548a1.046,1.046,0,0,1,0-1.479,1.044,1.044,0,0,1,1.479,0l.55.547a1.046,1.046,0,0,1,0,1.479,1.051,1.051,0,0,1-.741.306A1.054,1.054,0,0,1-5761.626-6798.145Zm-19.73,0a1.042,1.042,0,0,1,0-1.479l.547-.547a1.045,1.045,0,0,1,1.479,0,1.045,1.045,0,0,1,0,1.479l-.547.548a1.046,1.046,0,0,1-.738.306A1.057,1.057,0,0,1-5781.356-6798.145Zm2.234-10.6a8.373,8.373,0,0,1,8.371-8.373,8.374,8.374,0,0,1,8.373,8.373,8.371,8.371,0,0,1-8.373,8.37A8.37,8.37,0,0,1-5779.123-6808.75Zm20.93,1.046a1.048,1.048,0,0,1-1.047-1.046,1.046,1.046,0,0,1,1.047-1.047h1.4a1.046,1.046,0,0,1,1.046,1.047,1.047,1.047,0,0,1-1.046,1.046Zm-26.512,0a1.048,1.048,0,0,1-1.047-1.046,1.046,1.046,0,0,1,1.047-1.047h1.4a1.046,1.046,0,0,1,1.046,1.047,1.048,1.048,0,0,1-1.046,1.046Zm22.53-9.624a1.047,1.047,0,0,1,0-1.479l.548-.55a1.049,1.049,0,0,1,1.481,0,1.049,1.049,0,0,1,0,1.482l-.55.547a1.041,1.041,0,0,1-.738.306A1.052,1.052,0,0,1-5762.174-6817.328Zm-18.636,0-.547-.547a1.046,1.046,0,0,1,0-1.482,1.046,1.046,0,0,1,1.479,0l.547.547a1.049,1.049,0,0,1,0,1.482,1.042,1.042,0,0,1-.738.306A1.054,1.054,0,0,1-5780.81-6817.328Zm9.014-3.981v-1.395a1.047,1.047,0,0,1,1.044-1.048,1.048,1.048,0,0,1,1.047,1.048v1.395a1.046,1.046,0,0,1-1.047,1.047A1.045,1.045,0,0,1-5771.8-6821.309Z" transform="translate(5785.751 6823.751)" fill="currentColor"/></svg>';
+
+  const saved = localStorage.getItem('theme');
+  let dark = saved === 'dark';
+
+  function applyTheme() {
+    stylesheet.setAttribute('href', dark ? 'dark.css' : 'light.css');
+    // zet kleur van toggle zodat SVG (fill="currentColor") omzet naar gewenste kleur
+    toggle.style.color = dark ? 'rgba(255,255,255,0.9)' : 'rgba(0,0,0,0.9)';
+    toggle.innerHTML = dark ? moonSvg : sunSvg;
+  }
+
+  function showLoadingIfDark() {
+    const overlay = document.getElementById('loading-overlay');
+    if (!overlay) return;
+    // toon alleen als dark actief
+    if (dark) {
+      overlay.style.display = 'flex';
+      overlay.style.opacity = '1';
+      // na 1s uitfaden
+      setTimeout(() => {
+        overlay.style.opacity = '0';
+        setTimeout(() => {
+          if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
+        }, 400); // na fade
+      }, 300);
+    } else {
+      // geen overlay bij light
+      if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
+    }
+  }
+
+  applyTheme();
+
+  // show overlay direct na toepassen thema (alleen voor dark)
+  showLoadingIfDark();
+
+  toggle.addEventListener('click', () => {
+    dark = !dark;
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+    // sluit alle overlays (functie bestaat al eerder op de pagina)
+    if (typeof closeAllOverlays === 'function') closeAllOverlays();
+    applyTheme();
+    // toon overlay kort wanneer user schakelt naar dark
+    if (dark) showLoadingIfDark();
+    location.reload();
+  });
+})();
+</script>
+</body>
+</html>
