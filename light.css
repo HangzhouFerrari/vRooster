@@ -214,7 +214,6 @@
   left: 12px;
   width: clamp(32px, 10vw, 50px);
   height: clamp(32px, 10vw, 50px);
-  object-fit: cover;
   border-radius: 16px;
   z-index: 2;
   box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8) inset, 
@@ -587,4 +586,146 @@ a {
   margin-top: 20px;
   text-align: center;
   width: 100%;
+}
+
+.item-img[data-gridicon="scheikunde"] {
+  background: url(Assets/Icons/scheikunde.png) center/cover no-repeat;
+}
+
+.item-img[data-gridicon="vrij"] {
+  background: url(Assets/Icons/vrij.png) center/cover no-repeat;
+  opacity: 0.7;
+}
+
+.item-img[data-gridicon="latijn"] {
+  background: url(Assets/Icons/latijn.png) center/cover no-repeat;
+}
+
+.item-img[data-gridicon="grieks"] {
+  background: url(Assets/Icons/grieks.png) center/cover no-repeat;
+}
+
+.item-img[data-gridicon="aardrijkskunde"] {
+  background: url(Assets/Icons/aardrijkskunde.png) center/cover no-repeat;
+}
+
+.item-img[data-gridicon="nederlands"] {
+  background: url(Assets/Icons/nederlands.png) center/cover no-repeat;
+}
+
+.item-img[data-gridicon="geschiedenis"] {
+  background: url(Assets/Icons/geschiedenis.png) center/cover no-repeat;
+}
+
+.item-img[data-gridicon="frans"] {
+  background: url(Assets/Icons/frans.png) center/cover no-repeat;
+}
+
+.item-img[data-gridicon="duits"] {
+  background: url(Assets/Icons/duits.png) center/cover no-repeat;
+}
+
+.item-img[data-gridicon="wiskunde"] {
+  background: url(Assets/Icons/wiskunde.png) center/cover no-repeat;
+}
+
+.item-img[data-gridicon="economie"] {
+  background: url(Assets/Icons/economie.png) center/cover no-repeat;
+}
+
+.item-img[data-gridicon="natuurkunde"] {
+  background: url(Assets/Icons/natuurkunde.png) center/cover no-repeat;
+}
+
+.item-img[data-gridicon="engels"] {
+  background: url(Assets/Icons/engels.png) center/cover no-repeat;
+}
+
+.esc-btn {
+  aspect-ratio: 1 / 1;
+  height: 24px;
+  width: 24px;
+  display: block;
+  line-height: 0;
+  background: url(Assets/Icons/ESC.png) center/cover no-repeat;
+}
+
+.titel-img {
+  display: block;
+  height: clamp(32px, 64px, 82px);
+  width: clamp(32px, 64px, 82px);
+}
+
+.quizlet-img {
+  display: block;
+  height: 40px;
+  width: 40px;
+  background: url(Assets/Icons/overlay/Quizlet.png) center/contain no-repeat;
+}
+
+.magister-img {
+  display: block;
+  height: 40px;
+  width: 40px;
+  background: url(Assets/Icons/overlay/Magister.png) center/contain no-repeat;
+}
+
+.bestanden-img {
+  display: block;
+  height: 40px;
+  width: 40px;
+  background: url(Assets/Icons/overlay/Bestanden.png) center/contain no-repeat;
+}
+
+.titel-img[data-ticon="scheikunde"] {
+  background: url(Assets/Icons/text/scheikunde.png) center/contain no-repeat;
+}
+
+.titel-img[data-ticon="latijn"] {
+  background: url(Assets/Icons/text/latijn.png) center/contain no-repeat;
+}
+
+.titel-img[data-ticon="grieks"] {
+  background: url(Assets/Icons/text/grieks.png) center/contain no-repeat;
+}
+
+.titel-img[data-ticon="aardrijkskunde"] {
+  background: url(Assets/Icons/text/aardrijkskunde.png) center/contain no-repeat;
+}
+
+.titel-img[data-ticon="nederlands"] {
+  background: url(Assets/Icons/text/nederlands.png) center/contain no-repeat;
+}
+
+.titel-img[data-ticon="geschiedenis"] {
+  background: url(Assets/Icons/text/geschiedenis.png) center/contain no-repeat;
+}
+
+.titel-img[data-ticon="frans"] {
+  background: url(Assets/Icons/text/frans.png) center/contain no-repeat;
+}
+
+.titel-img[data-ticon="duits"] {
+  background: url(Assets/Icons/text/duits.png) center/contain no-repeat;
+}
+
+.titel-img[data-ticon="wiskunde"] {
+  background: url(Assets/Icons/text/wiskunde.png) center/contain no-repeat;
+}
+
+.titel-img[data-ticon="economie"] {
+  background: url(Assets/Icons/text/economie.png) center/contain no-repeat;
+}
+
+.titel-img[data-ticon="natuurkunde"] {
+  background: url('Assets/Icons/text/natuurkunde.png') center/contain no-repeat;
+}
+
+.titel-img[data-ticon="engels"] {
+  background: url('Assets/Icons/text/engels.png') center/contain no-repeat;
+  transform: scale(0.7);
+}
+
+.titel-img[data-ticon="waarschuwing"] {
+  background: url('Assets/Icons/waarschuwing.png') center/contain no-repeat;
 }
