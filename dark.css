@@ -597,7 +597,7 @@ a {
 
 .item-img[data-gridicon="vrij"] {
   background: url(Assets/donkere\ modus/Icons/vrij.png) center/cover no-repeat;
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .item-img[data-gridicon="latijn"] {

@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  background-color: rgb(244, 244, 249);
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(14px, 4vw, 18px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  height: 100vh;
+  width: 100%;
+  padding: clamp(10px, 3vh, 20px);
+  box-sizing: border-box;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.logo {
+  background-image: url('Assets/branding/logo_mainb_w1024.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  aspect-ratio: 5.12 / 1;
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: 0;
+  margin-bottom: clamp(10px, 3vh, 20px);
+}
+
+h1 {
+    font-size: clamp(36px, 6vw, 56px);
+    font-weight: 800;
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: clamp(18px, 5vw, 24px);
+    font-weight: 700;
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: -4px;
+}
+
+.titel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: clamp(10px, 3vh, 20px);
+    align-self: center;
+    width: 100%;
+    padding: clamp(2px, 3vh, 6px);
+    border-radius: 20px;
+    gap: 0.5px;
+    margin-bottom: 10px;
+}
+
+.icon {
+    display: inline-block;
+    width: clamp(120px, 10vw, 160px)
+}
+
+.app-icon {
+    aspect-ratio: 1 / 1;
+    width: clamp(120px, 10vw, 160px);
+    height: auto;
+    background-image: url(app/favicon-download.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.download {
+    background: linear-gradient(25deg, rgb(0, 0, 0) 0%, rgb(58, 58, 58) 100%);
+    padding: 12px 16px;
+    color: #fff;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: 'Red Hat Display', sans-serif;
+    transition: all 0.3s cubic-bezier(0,0,.47,1.15);
+    z-index: 2;
+    height: 100%;
+    max-height: 140px;
+    width: 100%;
+    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9) inset, 
+              -1px -1px 1px rgba(255, 255, 255, 0.9) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+    align-items: bottom;
+    margin-bottom: 5px;
+    transition: all 0.1s ease-in-out;
+}
+
+.download:active {
+    transform: scale(0.9);
+    filter: brightness(0.8);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+    background-image: linear-gradient(25deg, rgb(255, 255, 255) 0%, rgb(237, 239, 246) 100%);
+    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9) inset, 
+              -1px -1px 1px rgba(255, 255, 255, 0.9) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.info-img {
+    aspect-ratio: 1.85 / 1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.info-img[data-image="1"] {
+    background: url(app/placeholder.png) center/cover no-repeat;
+}
+
+.info-img[data-image="2"] {
+    background: url(app/placeholder.png) center/cover no-repeat;
+}
+
+.info-text {
+    font-size: clamp(16px, 4vw, 20px);
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 10px;
+}
+
+.uitleg {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+}

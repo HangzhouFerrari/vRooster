@@ -1,0 +1,20 @@
+{
+  "name": "vRooster",
+  "short_name": "vRooster",
+  "start_url": "/app/index.html",
+  "display": "standalone",
+  "background_color": "#f5f5f5",
+  "theme_color": "#f5f5f5",
+  "icons": [
+    {
+      "src": "app/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "app/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
