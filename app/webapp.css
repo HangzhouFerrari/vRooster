@@ -38,7 +38,7 @@ body {
 }
 
 .nav {
-    padding: clamp(10px, 2vh, 15px);
+    padding: clamp(5px, 2vh, 10px);
     display: flex;
     flex-direction: row;
     gap: clamp(120px, 2vw, 150px);
@@ -60,7 +60,7 @@ body {
 .nav-item {
     display: block;
     aspect-ratio: 1 / 1;
-    width: 50px;
+    width: 35px;
     height: auto;
     background-size: contain;
     background-repeat: no-repeat;
@@ -92,7 +92,7 @@ body {
 }
 
 .nav-label {
-    font-size: clamp(13px, 2vw, 18px);
+    font-size: clamp(10px, 2vw, 12px);
     font-weight: 500;
     color: rgba(0, 0, 0, 0.6);
 }
