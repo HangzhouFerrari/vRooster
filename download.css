@@ -107,6 +107,10 @@ h2 {
     align-items: bottom;
     margin-bottom: 5px;
     transition: all 0.1s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
 }
 
 .download:active {

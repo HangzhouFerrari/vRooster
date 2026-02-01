@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  background-image: linear-gradient(180deg,rgba(242, 241, 247, 1) 0%, rgba(217, 213, 235, 1) 100%);
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(14px, 4vw, 18px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  height: 100vh;
+  width: 100%;
+  padding: clamp(10px, 3vh, 20px);
+  box-sizing: border-box;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.logo {
+  background-image: url('Assets/branding/logo_mainb_w1024.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  aspect-ratio: 5.12 / 1;
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: 0;
+  margin-bottom: clamp(10px, 3vh, 20px);
+}
+
+.nav {
+    padding: clamp(10px, 2vh, 15px);
+    display: flex;
+    flex-direction: row;
+    gap: clamp(120px, 2vw, 150px);
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(180deg,rgba(30, 30, 30, 0.1) 0%, rgba(0, 0, 0, 0.2) 100%);
+    border-radius: 50px;
+    align-self: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6) inset, 
+              -1px -1px 1px rgba(255, 255, 255, 0.3) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav-item {
+    display: block;
+    aspect-ratio: 1 / 1;
+    width: 50px;
+    height: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.nav-item[data-nav-name="home"] {
+    background-image: url('Assets/icons/nav/home-inactive.png');
+}
+
+.nav-item[data-nav-name="settings"] {
+    background-image: url('Assets/icons/nav/settings-inactive.png');
+}
+
+.nav-item[data-nav-name="home"][data-active="1"] {
+    background-image: url('Assets/icons/nav/home-active.png') !important;
+}
+
+.nav-item[data-nav-name="settings"][data-active="1"] {
+    background-image: url('Assets/icons/nav/settings-active.png') !important;
+}
+
+.nav-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+}
+
+.nav-label {
+    font-size: clamp(13px, 2vw, 18px);
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.6);
+}
