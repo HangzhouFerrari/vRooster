@@ -296,6 +296,8 @@
   display: flex;
   flex-direction: column;
   transition: transform .5s ease, border-radius .5s ease, opacity .5s ease;
+  overflow: auto;
+  overflow-X: hidden;
 }
 .overlay.active .overlay-panel { transform: scale(1.0) rotateX(0deg) rotateY(0deg); border-radius: 0px; transition: transform .5s ease, border-radius .5s ease, opacity .5s ease; }
 .overlay-header { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; text-align:left; margin-top:10px; }
