@@ -365,32 +365,32 @@ h1 {
   overflow: auto;
   overflow-X: hidden;
 }
-.overlay.active .overlay-panel { border-radius: 50px; transform: translateX(0); border-radius: 0px; transition: transform .5s ease, opacity .5s ease; }
+.overlay.active .overlay-panel { border-radius: 50px; transform: translateX(0); border-radius: 0px; transition: transform .5s ease, opacity .2s ease; }
 .overlay-header { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; text-align:left; margin-top:10px; }
-.overlay-title { display: flex; align-items: center; gap: 8px; font-family: 'DM Sans', sans-serif; font-size: clamp(32px, 64px, 82px); font-weight: 800; margin:0; margin-bottom: 20px; }
-.overlay-subtitle { font-family: 'DM Sans', sans-serif; font-size: 24px; color: rgba(0, 0, 0, 0.8); margin-top:6px; }
-.overlay-body { margin-top: 12px; display:flex; gap:20px; flex-wrap:wrap; height: 100px; margin-bottom: 30px;}
+.overlay-title { display: flex; align-items: center; gap: 8px; font-family: 'DM Sans', sans-serif; font-size: clamp(42px, 5vw, 62px); font-weight: 800; margin:0; margin-bottom: 20px; }
+.overlay-subtitle { font-family: 'DM Sans', sans-serif; font-size: 18px; color: rgba(0, 0, 0, 0.8); margin-top:6px; }
+.overlay-body { margin-top: 12px; display:flex; gap:20px; flex-wrap:wrap; height: 80px; margin-bottom: 30px;}
 .overlay-close {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.50) 100%);
-  font-size: 24px;
   cursor: pointer;
   user-select: none;
-  border-radius: 8px;
+  border-radius: 50%;
   transition: all 0.3s ease;
   border: none;
   box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9) inset, 
               -1px -1px 1px rgba(255, 255, 255, 0.9) inset,
               0px 0px 5px rgba(0, 0, 0, 0.1);
   font-family: 'DM Sans', sans-serif;
-  border-radius: 15px;
+  border-radius: 50%;
   font-weight: 700;
-  white-space: nowrap;
-  height: 44px;
-  width: auto;
+ aspect-ratio: 1 / 1;
+  height: 50px;
+  width: 50px;
   padding: 0 16px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
 }
 
@@ -414,10 +414,10 @@ h1 {
   border: none;
   cursor: pointer;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'DM Sans', sans-serif;
   transition: all 0.3s cubic-bezier(0,0,.47,1.15);
-  width: 150px;
+  width: 100px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -441,14 +441,97 @@ a {
   border: none;
   cursor: pointer;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'DM Sans', sans-serif;
   transition: all 0.3s cubic-bezier(0,0,.47,1.15);
-  width: 150px;
+  width: 100px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
+}
+
+.esc-btn {
+  aspect-ratio: 1 / 1;
+  height: 36px;
+  width: 36px;
+  display: block;
+  line-height: 0;
+  background: url(Assets/Icons/ESC.png) center/cover no-repeat;
+}
+
+.quizlet-img {
+  display: block;
+  height: 36px;
+  width: 36px;
+  background: url(Assets/Icons/overlay/Quizlet.png) center/contain no-repeat;
+}
+
+.magister-img {
+  display: block;
+  height: 36px;
+  width: 36px;
+  background: url(Assets/Icons/overlay/Magister.png) center/contain no-repeat;
+}
+
+.bestanden-img {
+  display: block;
+  height: 32px;
+  width: 32px;
+  background: url(Assets/Icons/overlay/bestanden.png) center/contain no-repeat;
+}
+
+.titel-img[data-ticon="scheikunde"] {
+  background: url(Assets/Icons/text/scheikunde.png) center/contain no-repeat;
+}
+
+.titel-img[data-ticon="latijn"] {
+  background: url(Assets/Icons/text/latijn.png) center/contain no-repeat;
+}
+
+.titel-img[data-ticon="grieks"] {
+  background: url(Assets/Icons/text/grieks.png) center/contain no-repeat;
+}
+
+.titel-img[data-ticon="aardrijkskunde"] {
+  background: url(Assets/Icons/text/aardrijkskunde.png) center/contain no-repeat;
+}
+
+.titel-img[data-ticon="nederlands"] {
+  background: url(Assets/Icons/text/nederlands.png) center/contain no-repeat;
+}
+
+.titel-img[data-ticon="geschiedenis"] {
+  background: url(Assets/Icons/text/geschiedenis.png) center/contain no-repeat;
+}
+
+.titel-img[data-ticon="frans"] {
+  background: url(Assets/Icons/text/frans.png) center/contain no-repeat;
+}
+
+.titel-img[data-ticon="duits"] {
+  background: url(Assets/Icons/text/duits.png) center/contain no-repeat;
+}
+
+.titel-img[data-ticon="wiskunde"] {
+  background: url(Assets/Icons/text/wiskunde.png) center/contain no-repeat;
+}
+
+.titel-img[data-ticon="economie"] {
+  background: url(Assets/Icons/text/economie.png) center/contain no-repeat;
+}
+
+.titel-img[data-ticon="natuurkunde"] {
+  background: url('Assets/Icons/text/natuurkunde.png') center/contain no-repeat;
+}
+
+.titel-img[data-ticon="engels"] {
+  background: url('Assets/Icons/text/engels.png') center/contain no-repeat;
+  transform: scale(0.7);
+}
+
+.titel-img[data-ticon="waarschuwing"] {
+  background: url('Assets/Icons/waarschuwing.png') center/contain no-repeat;
 }
