@@ -15,10 +15,133 @@
         <h1>Mijn rooster.</h1>
         <div class="rooster">
             <div class="zijbalk">
-
+              <div class="dag-knop" onclick="window.location.href='#vrij'">Vr</div>
+              <div class="dag-knop" onclick="window.location.href='#ma'">Ma</div>
+              <div class="dag-knop" onclick="window.location.href='#di'">Di</div>
+              <div class="dag-knop" onclick="window.location.href='#wo'">Wo</div>
+              <div class="dag-knop" onclick="window.location.href='#do'">Do</div>
+              <div class="dag-knop" onclick="window.location.href='#vr'">Vr</div>
             </div>
-            <div class="grid">
+            <div class="lijst">
+              <div class="dag" id="vrij">
+                <div class="dag-titel"><b>Vrijdag</b> 13-2</div>
+                <div class="dag-knoppen">
+                  <div class="lijst-item">
+                    <div class="dag-img" data-vak="sk"></div>
+                    <div class="dag-titels">
+                      <div class="titel">Scheikunde</div>
+                      <div class="subtitel">11:20-12:10</div>
+                    </div>
+                  </div>
+                  <div class="lijst-item">
+                    <div class="dag-img" data-vak="fa"></div>
+                    <div class="dag-titels">
+                      <div class="titel">Frans</div>
+                      <div class="subtitel">12:40-13:30</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="dag" id="ma">
+                <div class="dag-titel"><b>Maandag</b> 16-2</div>
+                <div class="dag-knoppen">
+                  <div class="lijst-item">
+                    <div class="dag-img" data-vak="la"></div>
+                    <div class="dag-titels">
+                      <div class="titel">Latijn</div>
+                      <div class="subtitel">11:20-12:10</div>
+                    </div>
+                  </div>
+                  <div class="lijst-item">
+                    <div class="dag-img" data-vak="du"></div>
+                    <div class="dag-titels">
+                      <div class="titel">Duits</div>
+                      <div class="subtitel">12:40-13:30</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
+              <div class="dag" id="di">
+                <div class="dag-titel"><b>Dinsdag</b> 17-2</div>
+                <div class="dag-knoppen">
+                  <div class="lijst-item">
+                    <div class="dag-img" data-vak="gr"></div>
+                    <div class="dag-titels">
+                      <div class="titel">Grieks</div>
+                      <div class="subtitel">11:20-12:10</div>
+                    </div>
+                  </div>
+                  <div class="lijst-item">
+                    <div class="dag-img" data-vak="wi"></div>
+                    <div class="dag-titels">
+                      <div class="titel">Wiskunde</div>
+                      <div class="subtitel">12:40-13:30</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dag" id="wo">
+                <div class="dag-titel"><b>Woensdag</b> 18-2</div>
+                <div class="dag-knoppen">
+                  <div class="lijst-item">
+                    <div class="dag-img" data-vak="ak"></div>
+                    <div class="dag-titels">
+                      <div class="titel">Aardrijkskunde</div>
+                      <div class="subtitel">11:20-12:10</div>
+                    </div>
+                  </div>
+                  <div class="lijst-item">
+                    <div class="dag-img" data-vak="ec"></div>
+                    <div class="dag-titels">
+                      <div class="titel">Economie</div>
+                      <div class="subtitel">12:40-13:30</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dag" id="do">
+                <div class="dag-titel"><b>Donderdag</b> 19-2</div>
+                <div class="dag-knoppen">
+                  <div class="lijst-item">
+                    <div class="dag-img" data-vak="ne"></div>
+                    <div class="dag-titels">
+                      <div class="titel">Nederlands</div>
+                      <div class="subtitel">11:20-12:10</div>
+                    </div>
+                  </div>
+                  <div class="lijst-item">
+                    <div class="dag-img" data-vak="na"></div>
+                    <div class="dag-titels">
+                      <div class="titel">Natuurkunde</div>
+                      <div class="subtitel">12:40-13:30</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dag" id="vr">
+                <div class="dag-titel"><b>Vrijdag</b> 20-2</div>
+                <div class="dag-knoppen">
+                  <div class="lijst-item">
+                    <div class="dag-img" data-vak="gs"></div>
+                    <div class="dag-titels">
+                      <div class="titel">Geschiedenis</div>
+                      <div class="subtitel">11:20-12:10</div>
+                    </div>
+                  </div>
+                  <div class="lijst-item">
+                    <div class="dag-img" data-vak="en"></div>
+                    <div class="dag-titels">
+                      <div class="titel">Engels</div>
+                      <div class="subtitel">12:40-13:30</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
     </div>
@@ -60,5 +183,38 @@ document.querySelectorAll('a').forEach(link => {
     mainContent.classList.remove("page-in");
   });
 });
+</script>
+<script>
+// Functie om actieve dag te highlighten
+function updateActiveDag() {
+  const dagen = document.querySelectorAll('.dag');
+  const dagKnoppen = document.querySelectorAll('.dag-knop');
+  
+  // Vind welke dag momenteel zichtbaar is
+  let activeDag = null;
+  dagen.forEach(dag => {
+    const rect = dag.getBoundingClientRect();
+    // Check of de dag in het viewport is (met wat margin)
+    if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+      activeDag = dag.id;
+    }
+  });
+  
+  // Update de knoppen
+  dagKnoppen.forEach((knop, index) => {
+    const href = knop.getAttribute('onclick').match(/#(.+)'/)[1];
+    if (href === activeDag) {
+      knop.classList.add('active');
+    } else {
+      knop.classList.remove('active');
+    }
+  });
+}
+
+// Luister naar scroll events
+document.querySelector('.lijst').addEventListener('scroll', updateActiveDag);
+
+// Ook bij page load
+document.addEventListener('DOMContentLoaded', updateActiveDag);
 </script>
 </html>
