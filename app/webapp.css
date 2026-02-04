@@ -22,6 +22,11 @@ body {
   margin: 0;
   overflow: hidden;
   position: relative;
+  -webkit-user-select: none; /* Safari/Chrome */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Standaard */
+  -webkit-touch-callout: none; /* iOS callout (extra zekerheid) */
 }
 
 .logo {
@@ -64,6 +69,7 @@ h1 {
               -1px -1px 1px rgba(255, 255, 255, 0.3) inset,
               0px 0px 5px rgba(0, 0, 0, 0.3);
     position: fixed;
+    z-index: 10;
 }
 
 .nav-item {
@@ -318,4 +324,131 @@ h1 {
 .titel {
     font-size: clamp(20px, 5vw, 30px);
     font-weight: 800;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2,6,23,0.7);
+  backdrop-filter: blur(4px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease;
+  z-index: 9;
+  perspective: 1000px;
+}
+.overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+.overlay-panel {
+  background: #f2f1f7;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  box-shadow: -1px -1px 0 0 rgba(255, 255, 255, 0.30) inset,
+              1px 1px 0 0 rgba(255, 255, 255, 0.50) inset;
+  color: #0c0c0c;
+  width: 100%;
+  padding: 20px 20px;
+  transform: translateX(100%);
+  border-radius: 50px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all .5s cubic-bezier(0,0,.47,1.15);
+  overflow: auto;
+  overflow-X: hidden;
+}
+.overlay.active .overlay-panel { border-radius: 50px; transform: translateX(0); border-radius: 0px; transition: transform .5s ease, opacity .5s ease; }
+.overlay-header { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; text-align:left; margin-top:10px; }
+.overlay-title { display: flex; align-items: center; gap: 8px; font-family: 'DM Sans', sans-serif; font-size: clamp(32px, 64px, 82px); font-weight: 800; margin:0; margin-bottom: 20px; }
+.overlay-subtitle { font-family: 'DM Sans', sans-serif; font-size: 24px; color: rgba(0, 0, 0, 0.8); margin-top:6px; }
+.overlay-body { margin-top: 12px; display:flex; gap:20px; flex-wrap:wrap; height: 100px; margin-bottom: 30px;}
+.overlay-close {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.50) 100%);
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9) inset, 
+              -1px -1px 1px rgba(255, 255, 255, 0.9) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'DM Sans', sans-serif;
+  border-radius: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+  height: 44px;
+  width: auto;
+  padding: 0 16px;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.overlay-close:hover {
+    background: rgba(255, 255, 255, 0.7);
+    transform: scale(1.02);
+}
+
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+}
+.overlay-btn {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.50) 100%);
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9) inset, 
+              -1px -1px 1px rgba(255, 255, 255, 0.9) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.1);
+  color: #000;
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.3s cubic-bezier(0,0,.47,1.15);
+  width: 150px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.overlay-btn-quizlet {
+  background: linear-gradient(180deg, rgba(66, 85, 255, 1.0) 0%, rgba(66, 85, 255, 0.80) 100%);
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6) inset, 
+              -1px -1px 1px rgba(255, 255, 255, 0.6) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.3s cubic-bezier(0,0,.47,1.15);
+  width: 150px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
 }
