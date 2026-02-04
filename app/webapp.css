@@ -52,12 +52,12 @@ h1 {
     flex-direction: row;
     gap: clamp(120px, 2vw, 150px);
     position: fixed;
-    bottom: 10px;
+    bottom: calc(20px + env(safe-area-inset-bottom));
     left: 10px;
     right: 10px;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(180deg,rgba(30, 30, 30, 0.1) 0%, rgba(0, 0, 0, 0.2) 100%);
+    background: linear-gradient(180deg,rgba(179, 179, 179, 0.3) 0%, rgba(98, 98, 98, 0.5) 100%);
     border-radius: 50px;
     backdrop-filter: blur(10px);
     box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6) inset, 
@@ -150,7 +150,7 @@ h1 {
     justify-content: center;
     flex-direction: row;
     gap: 0;
-    background: linear-gradient(180deg,rgba(30, 30, 30, 0.1) 0%, rgba(0, 0, 0, 0.2) 100%);
+    background: linear-gradient(180deg,rgba(179, 179, 179, 0.3) 0%, rgba(98, 98, 98, 0.5) 100%);
     border-radius: 50px;
     padding: clamp(5px, 2vh, 10px);
     box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9) inset, 
@@ -158,7 +158,7 @@ h1 {
               0px 0px 5px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     position: fixed;
-    bottom: 90px;
+    bottom: calc(100px + env(safe-area-inset-bottom));
     left: 10px;
     right: 10px;
     justify-content: space-between;
@@ -239,6 +239,46 @@ h1 {
 
 .dag-img[data-vak="fa"] {
     background-image: url('Assets/icons/frans.png');
+}
+
+.dag-img[data-vak="la"] {
+    background-image: url('Assets/icons/latijn.png');
+}
+
+.dag-img[data-vak="du"] {
+    background-image: url('Assets/icons/duits.png');
+}
+
+.dag-img[data-vak="gr"] {
+    background-image: url('Assets/icons/grieks.png');
+}
+
+.dag-img[data-vak="wi"] {
+    background-image: url('Assets/icons/wiskunde.png');
+}
+
+.dag-img[data-vak="ak"] {
+    background-image: url('Assets/icons/aardrijkskunde.png');
+}
+
+.dag-img[data-vak="ec"] {
+    background-image: url('Assets/icons/economie.png');
+}
+
+.dag-img[data-vak="ne"] {
+    background-image: url('Assets/icons/nederlands.png');
+}
+
+.dag-img[data-vak="na"] {
+    background-image: url('Assets/icons/natuurkunde.png');
+}
+
+.dag-img[data-vak="en"] {
+    background-image: url('Assets/icons/engels.png');
+}
+
+.dag-img[data-vak="gs"] {
+    background-image: url('Assets/icons/geschiedenis.png');
 }
 
 .lijst {
