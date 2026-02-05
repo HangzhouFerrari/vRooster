@@ -1,0 +1,636 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+  background-color: rgba(242, 241, 247, 1);
+}
+
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+body {
+  background-image: linear-gradient(180deg,rgba(242, 241, 247, 1) 0%, rgba(217, 213, 235, 1) 100%);
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(14px, 4vw, 18px);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  padding: clamp(10px, 3vh, 20px);
+  padding-bottom: 0;
+  box-sizing: border-box;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  -webkit-user-select: none; /* Safari/Chrome */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Standaard */
+  -webkit-touch-callout: none; /* iOS callout (extra zekerheid) */
+}
+
+.logo {
+  background-image: url('Assets/branding/logo_mainb_w1024.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  aspect-ratio: 5.12 / 1;
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: 0;
+  margin-bottom: clamp(10px, 3vh, 20px);
+  flex-shrink: 0; /* Voorkom dat logo verkleint */
+}
+
+h1 {
+    font-size: clamp(36px, 6vw, 56px);
+    font-weight: 900;
+    margin: 0;
+    margin-bottom: clamp(15px, 2vh, 20px);
+    font-family: 'DM Sans', sans-serif;
+    flex-shrink: 0; /* Voorkom dat h1 verkleint */
+}
+
+.nav {
+    padding: clamp(5px, 2vh, 10px);
+    display: flex;
+    flex-direction: row;
+    gap: clamp(120px, 2vw, 150px);
+    position: fixed;
+    bottom: calc(20px + env(safe-area-inset-bottom));
+    left: 10px;
+    right: 10px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg,rgba(220, 220, 220, 0.3) 0%, rgba(167, 167, 167, 0.5) 100%);
+    border-radius: 50px;
+    backdrop-filter: blur(4px);
+    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6) inset, 
+              -1px -1px 1px rgba(255, 255, 255, 0.3) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    z-index: 10;
+}
+
+.nav-item {
+    display: block;
+    aspect-ratio: 1 / 1;
+    width: 35px;
+    height: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    box-sizing: border-box;
+    transition: 0.2s ease;
+}
+
+.nav-item:active {
+    transform: scale(0.6);
+    transition: all 0.1s ease;
+}
+
+.nav-item[data-nav-name="home"] {
+    background-image: url('Assets/icons/nav/home-inactive.png');
+}
+
+.nav-item[data-nav-name="settings"] {
+    background-image: url('Assets/icons/nav/settings-inactive.png');
+}
+
+.nav-item[data-nav-name="home"][data-active="1"] {
+    background-image: url('Assets/icons/nav/home-active.png') !important;
+}
+
+.nav-item[data-nav-name="settings"][data-active="1"] {
+    background-image: url('Assets/icons/nav/settings-active.png') !important;
+}
+
+.nav-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+}
+
+.nav-label {
+    font-size: clamp(10px, 2vw, 12px);
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.main-content {
+    opacity: 0;
+    transform: scale(1.5);
+    transition: all 0.5s cubic-bezier(.4,0,.2,1);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 0; /* Belangrijk voor flexbox scrolling */
+    flex: 1; /* Vul beschikbare ruimte */
+}
+
+.main-content.page-in {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.5s cubic-bezier(.4,0,.2,1);
+}
+
+.rooster {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1; /* Vul beschikbare ruimte in main-content */
+    min-height: 0; /* Belangrijk voor flexbox scrolling */
+    padding-bottom: 10px;
+    gap: clamp(10px, 2vh, 15px);
+}
+
+.zijbalk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0;
+    background: linear-gradient(180deg,rgba(220, 220, 220, 0.3) 0%, rgba(167, 167, 167, 0.5) 100%);
+    border-radius: 50px;
+    padding: clamp(5px, 2vh, 10px);
+    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9) inset, 
+              -1px -1px 1px rgba(255, 255, 255, 0.9) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    position: fixed;
+    bottom: calc(100px + env(safe-area-inset-bottom));
+    left: 10px;
+    right: 10px;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.dag-knop {
+    padding: 0; /* Geen padding, we gebruiken width/height */
+    width: clamp(45px, 10vw, 55px); /* Vaste breedte */
+    height: clamp(45px, 10vw, 55px); /* Zelfde hoogte = perfecte cirkel */
+    background: linear-gradient(180deg, rgb(226, 228, 238) 0%, rgba(158, 166, 195, 0.7) 100%);
+    border: none;
+    border-radius: 50%;
+    font-size: clamp(14px, 3vw, 16px);
+    font-weight: 800;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    transition: all 0.2s ease;
+    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9) inset, 
+              -1px -1px 1px rgba(255, 255, 255, 0.9) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.1);
+    color: #000;
+    font-family: 'DM Sans', sans-serif;
+    display: flex; /* Verander naar flex */
+    align-items: center; /* Verticaal centreren */
+    justify-content: center; /* Horizontaal centreren */
+    flex-shrink: 0; /* Voorkom krimpen */
+    transition: all 0.2s ease;
+}
+
+.dag-knop:active {
+    transform: scale(0.85);
+    filter: brightness(0.8);
+}
+
+.dag-knop:active {
+    transform: scale(0.8);
+    filter: brightness(0.8);
+    transition: all 0.1s ease;
+}
+
+.dag-knoppen {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(4px, 2vh, 6px);
+}
+
+.lijst-item {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.50) 100%);
+    display: flex;
+    flex-direction: row;
+    padding: clamp(10px, 2vh, 15px);
+    border-radius: 20px;
+    gap: clamp(10px, 2vw, 15px);
+    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9) inset, 
+              -1px -1px 1px rgba(255, 255, 255, 0.9) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dag-img {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    max-width: clamp(50px, 8vw, 80px);
+    height: auto;
+    border-radius: 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8) inset, 
+              -1px -1px 1px rgba(255, 255, 255, 0.4) inset;
+}
+
+.dag-img[data-vak="sk"] {
+    background-image: url('Assets/icons/scheikunde.png');
+}
+
+.dag-img[data-vak="fa"] {
+    background-image: url('Assets/icons/frans.png');
+}
+
+.dag-img[data-vak="la"] {
+    background-image: url('Assets/icons/latijn.png');
+}
+
+.dag-img[data-vak="du"] {
+    background-image: url('Assets/icons/duits.png');
+}
+
+.dag-img[data-vak="gr"] {
+    background-image: url('Assets/icons/grieks.png');
+}
+
+.dag-img[data-vak="wi"] {
+    background-image: url('Assets/icons/wiskunde.png');
+}
+
+.dag-img[data-vak="ak"] {
+    background-image: url('Assets/icons/aardrijkskunde.png');
+}
+
+.dag-img[data-vak="ec"] {
+    background-image: url('Assets/icons/economie.png');
+}
+
+.dag-img[data-vak="ne"] {
+    background-image: url('Assets/icons/nederlands.png');
+}
+
+.dag-img[data-vak="na"] {
+    background-image: url('Assets/icons/natuurkunde.png');
+}
+
+.dag-img[data-vak="en"] {
+    background-image: url('Assets/icons/engels.png');
+}
+
+.dag-img[data-vak="gs"] {
+    background-image: url('Assets/icons/geschiedenis.png');
+}
+
+.lijst {
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    padding-bottom: 150px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+}
+
+.lijst::-webkit-scrollbar {
+    display: none; /* Chrome, Safari en Opera */
+}
+
+.dag-titel {
+    font-size: clamp(20px, 5vw, 30px);
+    font-weight: 800;
+    margin: 0;
+    margin-bottom: clamp(7px, 2vh, 13px); 
+}
+
+.dag-knoppen {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(4px, 2vh, 6px);
+    margin-bottom: clamp(20px, 3vh, 25px);
+}
+
+.dag-knop.active {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+    transition: all 0.2s ease;
+}
+
+.titel {
+    font-size: clamp(20px, 5vw, 30px);
+    font-weight: 800;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(242, 241, 247, 1);
+  backdrop-filter: blur(4px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease;
+  z-index: 9;
+  perspective: 1000px;
+}
+.overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+.overlay-panel {
+  background: #f2f1f7;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  box-shadow: -1px -1px 0 0 rgba(255, 255, 255, 0.30) inset,
+              1px 1px 0 0 rgba(255, 255, 255, 0.50) inset;
+  color: #0c0c0c;
+  width: 100%;
+  padding: 5px 5px;
+  transform: translateX(100%);
+  border-radius: 50px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all .6s cubic-bezier(.3,.55,.01,.99);
+  overflow: auto;
+  overflow-X: hidden;
+}
+.overlay.active .overlay-panel { 
+  border-radius: 50px; 
+  transform: translateX(0); 
+}
+
+.overlay-header { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; text-align:left; margin-top:10px; }
+.overlay-title { display: flex; align-items: center; gap: 8px; font-family: 'DM Sans', sans-serif; font-size: clamp(42px, 5vw, 62px); font-weight: 800; margin:0; margin-bottom: 20px; }
+.overlay-subtitle { font-family: 'DM Sans', sans-serif; font-size: 18px; color: rgba(0, 0, 0, 0.8); margin-top:6px; }
+.overlay-body { margin-top: 12px; display:flex; gap:20px; flex-wrap:wrap; height: 80px; margin-bottom: 30px;}
+.overlay-close {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.50) 100%);
+  cursor: pointer;
+  user-select: none;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9) inset, 
+              -1px -1px 1px rgba(255, 255, 255, 0.9) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'DM Sans', sans-serif;
+  border-radius: 50%;
+  font-weight: 700;
+ aspect-ratio: 1 / 1;
+  height: 50px;
+  width: 50px;
+  padding: 0 16px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.overlay-close:hover {
+    background: rgba(255, 255, 255, 0.7);
+    transform: scale(1.02);
+}
+
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+}
+.overlay-btn {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.50) 100%);
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9) inset, 
+              -1px -1px 1px rgba(255, 255, 255, 0.9) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.1);
+  color: #000;
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.3s cubic-bezier(0,0,.47,1.15);
+  width: 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.overlay-btn-quizlet {
+  background: linear-gradient(180deg, rgba(66, 85, 255, 1.0) 0%, rgba(66, 85, 255, 0.80) 100%);
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6) inset, 
+              -1px -1px 1px rgba(255, 255, 255, 0.6) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.3s cubic-bezier(0,0,.47,1.15);
+  width: 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.esc-btn {
+  aspect-ratio: 1 / 1;
+  height: 36px;
+  width: 36px;
+  display: block;
+  line-height: 0;
+  background: url('Assets/icons/ESC.png') center/cover no-repeat;
+}
+
+.quizlet-img {
+  display: block;
+  height: 36px;
+  width: 36px;
+  background: url('Assets/icons/overlay/Quizlet.png') center/contain no-repeat;
+}
+
+.magister-img {
+  display: block;
+  height: 36px;
+  width: 36px;
+  background: url('Assets/icons/overlay/Magister.png') center/contain no-repeat;
+}
+
+.bestanden-img {
+  display: block;
+  height: 32px;
+  width: 32px;
+  background: url('Assets/icons/overlay/bestanden.png') center/contain no-repeat;
+}
+
+.titel-img[data-ticon="scheikunde"] {
+  background: url('Assets/icons/text/scheikunde.png') center/contain no-repeat;
+}
+
+.titel-img[data-ticon="latijn"] {
+  background: url('Assets/icons/text/latijn.png') center/contain no-repeat;
+}
+
+.titel-img[data-ticon="grieks"] {
+  background: url('Assets/icons/text/grieks.png') center/contain no-repeat;
+}
+
+.titel-img[data-ticon="aardrijkskunde"] {
+  background: url('Assets/icons/text/aardrijkskunde.png') center/contain no-repeat;
+}
+
+.titel-img[data-ticon="nederlands"] {
+  background: url('Assets/icons/text/nederlands.png') center/contain no-repeat;
+}
+
+.titel-img[data-ticon="geschiedenis"] {
+  background: url('Assets/icons/text/geschiedenis.png') center/contain no-repeat;
+}
+
+.titel-img[data-ticon="frans"] {
+  background: url('Assets/icons/text/frans.png') center/contain no-repeat;
+}
+
+.titel-img[data-ticon="duits"] {
+  background: url('Assets/icons/text/duits.png') center/contain no-repeat;
+}
+
+.titel-img[data-ticon="wiskunde"] {
+  background: url('Assets/icons/text/wiskunde.png') center/contain no-repeat;
+}
+
+.titel-img[data-ticon="economie"] {
+  background: url('Assets/icons/text/economie.png') center/contain no-repeat;
+}
+
+.titel-img[data-ticon="natuurkunde"] {
+  background: url('Assets/icons/text/natuurkunde.png') center/contain no-repeat;
+}
+
+.titel-img[data-ticon="engels"] {
+  background: url('Assets/icons/text/engels.png') center/contain no-repeat;
+  transform: scale(0.7);
+}
+
+.titel-img[data-ticon="waarschuwing"] {
+  background: url('Assets/icons/waarschuwing.png') center/contain no-repeat;
+}
+
+.titel-img {
+  aspect-ratio: 1 / 1;
+  width: clamp(40px, 6vw, 60px);
+  height: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  flex-shrink: 0;
+}
+
+.stngs-item {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.50) 100%);
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9) inset, 
+              -1px -1px 1px rgba(255, 255, 255, 0.9) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: clamp(10px, 2vh, 15px);
+  border-radius: 20px;
+  justify-content: space-between;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.stngs-img {
+    aspect-ratio: 1 / 1;
+    width: clamp(20px, 8vw, 30px);
+    height: auto;
+    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.8) inset, 
+              -0.5px -0.5px 0.5px rgba(255, 255, 255, 0.4) inset;
+    flex: 1;
+}
+
+.stngs-img[data-sicon="donkere-modus"] {
+    background-image: url('Assets/icons/donkeremodus.png');
+}
+
+.stngs-img[data-sicon="info"] {
+    background-image: url('Assets/icons/info.png');
+}
+
+.stngs-title {
+    font-size: clamp(16px, 4vw, 20px);
+    font-weight: 500;
+    margin-left: clamp(10px, 2vw, 15px);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.stngs-subtitle {
+    font-size: clamp(16px, 4vw, 20px);
+    font-weight: 500;
+    margin-left: clamp(10px, 2vw, 15px);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.stngs-toggle {
+  background-image: url('Assets/icons/toggle.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 2 / 1;
+  width: clamp(50px, 10vw, 60px);
+  height: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+.stngs {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 2vh, 15px);
+}

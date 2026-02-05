@@ -133,6 +133,8 @@ h2 {
               0px 0px 5px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     margin-bottom: 20px;
+    border: rgba(0, 0, 0, 0.5) 5px solid;
+    align-self: center;
 }
 
 .info-img {
@@ -144,11 +146,11 @@ h2 {
 }
 
 .info-img[data-image="1"] {
-    background: url(app/placeholder.png) center/cover no-repeat;
+    background: url(app/foto-1.png) center/cover no-repeat;
 }
 
 .info-img[data-image="2"] {
-    background: url(app/placeholder.png) center/cover no-repeat;
+    background: url(app/foto-2.png) center/cover no-repeat;
 }
 
 .info-text {

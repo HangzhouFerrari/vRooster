@@ -4,7 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
   <title>vRooster</title>
-  <link rel="stylesheet" id="themeStylesheet" href="webapp.css"/>
+  <script>
+  (function () {
+    const savedTheme = localStorage.getItem("theme");
+
+   if (savedTheme === "dark") {
+     document.write('<link rel="stylesheet" id="themeStylesheet" href="dark.css">');
+    } else {
+      document.write('<link rel="stylesheet" id="themeStylesheet" href="light.css">');
+   }
+  })();
+  </script>
   <link rel="manifest" href="manifest.json">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=install_desktop" />
@@ -12,6 +22,19 @@
 <body>
     <div class="main-content">
         <div class="logo"></div>
+        <h1>Instellingen.</h1>
+        <div class="stngs">
+          <div class="stngs-item">
+            <div class="stngs-title"><div class="stngs-img" data-sicon="donkere-modus"></div> Donkere modus</div>
+            <div class="stngs-toggle" onclick="toggleTheme()"></div>
+          </div>
+
+          <div class="stngs-item">
+            <div class="stngs-title"><div class="stngs-img" data-sicon="info"></div> App versie</div>
+            <div class="stngs-subtitle">V2.0.7</div>
+          </div>
+
+        </div>
     </div>
     <div class="nav">
         <div class="nav-button" onclick="window.location.href='index.html#vrij'"><div class="nav-item" data-nav-name="home" data-active="0"></div><div class="nav-label">Home</div></div>
@@ -51,5 +74,20 @@ document.querySelectorAll('a').forEach(link => {
     mainContent.classList.remove("page-in");
   });
 });
+
+function toggleTheme() {
+  const themeLink = document.getElementById("themeStylesheet");
+
+  if (!themeLink) return;
+
+  if (themeLink.getAttribute("href") === "dark.css") {
+    themeLink.setAttribute("href", "light.css");
+    localStorage.setItem("theme", "light");
+  } else {
+    themeLink.setAttribute("href", "dark.css");
+    localStorage.setItem("theme", "dark");
+  }
+}
+
 </script>
 </html>

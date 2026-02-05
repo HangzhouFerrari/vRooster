@@ -4,7 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
   <title>vRooster</title>
-  <link rel="stylesheet" id="themeStylesheet" href="webapp.css"/>
+  <script>
+  (function () {
+    const savedTheme = localStorage.getItem("theme");
+
+   if (savedTheme === "dark") {
+     document.write('<link rel="stylesheet" id="themeStylesheet" href="dark.css">');
+    } else {
+      document.write('<link rel="stylesheet" id="themeStylesheet" href="light.css">');
+   }
+  })();
+  </script>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#F2F1F7">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -18,7 +28,7 @@
 <body>
     <div class="main-content">
         <div class="logo"></div>
-        <h1>Mijn rooster.</h1>
+        <h1>Toetsweek 2.</h1>
         <div class="rooster">
             <div class="zijbalk">
               <div class="dag-knop" onclick="window.location.href='#vrij'">Vr</div>

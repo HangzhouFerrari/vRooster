@@ -9,7 +9,7 @@ html {
 }
 
 html, body {
-  background-color: rgba(242, 241, 247, 1);
+  background-color: rgba(10, 10, 10, 1);
 }
 
 
@@ -19,7 +19,7 @@ html, body {
 }
 
 body {
-  background-image: linear-gradient(180deg,rgba(242, 241, 247, 1) 0%, rgba(217, 213, 235, 1) 100%);
+  background-image: linear-gradient(180deg,rgb(10, 10, 10) 0%, rgb(10, 8, 18) 100%);
   font-family: 'DM Sans', sans-serif;
   font-size: clamp(14px, 4vw, 18px);
   display: flex;
@@ -342,7 +342,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(2,6,23,0.7);
+  background: rgba(242, 241, 247, 1);
   backdrop-filter: blur(4px);
   visibility: hidden;
   opacity: 0;
@@ -548,4 +548,89 @@ a {
 
 .titel-img[data-ticon="waarschuwing"] {
   background: url('Assets/icons/waarschuwing.png') center/contain no-repeat;
+}
+
+.titel-img {
+  aspect-ratio: 1 / 1;
+  width: clamp(40px, 6vw, 60px);
+  height: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  flex-shrink: 0;
+}
+
+.stngs-item {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.50) 100%);
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9) inset, 
+              -1px -1px 1px rgba(255, 255, 255, 0.9) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: clamp(10px, 2vh, 15px);
+  border-radius: 20px;
+  justify-content: space-between;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.stngs-img {
+    aspect-ratio: 1 / 1;
+    width: clamp(20px, 8vw, 30px);
+    height: auto;
+    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.8) inset, 
+              -0.5px -0.5px 0.5px rgba(255, 255, 255, 0.4) inset;
+    flex: 1;
+}
+
+.stngs-img[data-sicon="donkere-modus"] {
+    background-image: url('Assets/icons/donkeremodus.png');
+}
+
+.stngs-img[data-sicon="info"] {
+    background-image: url('Assets/icons/info.png');
+}
+
+.stngs-title {
+    font-size: clamp(16px, 4vw, 20px);
+    font-weight: 500;
+    margin-left: clamp(10px, 2vw, 15px);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.stngs-subtitle {
+    font-size: clamp(16px, 4vw, 20px);
+    font-weight: 500;
+    margin-left: clamp(10px, 2vw, 15px);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.stngs-toggle {
+  background-image: url('Assets/icons/toggle.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 2 / 1;
+  width: clamp(50px, 10vw, 60px);
+  height: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+.stngs {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 2vh, 15px);
 }
