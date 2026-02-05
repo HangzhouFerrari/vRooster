@@ -17,7 +17,7 @@ body {
   height: 100vh;
   width: 100%;
   padding: clamp(10px, 3vh, 20px);
-  padding-bottom: 0; /* Geen padding onderaan voor navbar */
+  padding-bottom: 0;
   box-sizing: border-box;
   margin: 0;
   overflow: hidden;
@@ -240,51 +240,51 @@ h1 {
 }
 
 .dag-img[data-vak="sk"] {
-    background-image: url('assets/icons/scheikunde.png');
+    background-image: url('Assets/icons/scheikunde.png');
 }
 
 .dag-img[data-vak="fa"] {
-    background-image: url('assets/icons/frans.png');
+    background-image: url('Assets/icons/frans.png');
 }
 
 .dag-img[data-vak="la"] {
-    background-image: url('assets/icons/latijn.png');
+    background-image: url('Assets/icons/latijn.png');
 }
 
 .dag-img[data-vak="du"] {
-    background-image: url('assets/icons/duits.png');
+    background-image: url('Assets/icons/duits.png');
 }
 
 .dag-img[data-vak="gr"] {
-    background-image: url('assets/icons/grieks.png');
+    background-image: url('Assets/icons/grieks.png');
 }
 
 .dag-img[data-vak="wi"] {
-    background-image: url('assets/icons/wiskunde.png');
+    background-image: url('Assets/icons/wiskunde.png');
 }
 
 .dag-img[data-vak="ak"] {
-    background-image: url('assets/icons/aardrijkskunde.png');
+    background-image: url('Assets/icons/aardrijkskunde.png');
 }
 
 .dag-img[data-vak="ec"] {
-    background-image: url('assets/icons/economie.png');
+    background-image: url('Assets/icons/economie.png');
 }
 
 .dag-img[data-vak="ne"] {
-    background-image: url('assets/icons/nederlands.png');
+    background-image: url('Assets/icons/nederlands.png');
 }
 
 .dag-img[data-vak="na"] {
-    background-image: url('assets/icons/natuurkunde.png');
+    background-image: url('Assets/icons/natuurkunde.png');
 }
 
 .dag-img[data-vak="en"] {
-    background-image: url('assets/icons/engels.png');
+    background-image: url('Assets/icons/engels.png');
 }
 
 .dag-img[data-vak="gs"] {
-    background-image: url('assets/icons/geschiedenis.png');
+    background-image: url('Assets/icons/geschiedenis.png');
 }
 
 .lijst {
@@ -459,79 +459,79 @@ a {
   width: 36px;
   display: block;
   line-height: 0;
-  background: url(assets/icons/ESC.png) center/cover no-repeat;
+  background: url('Assets/icons/ESC.png') center/cover no-repeat;
 }
 
 .quizlet-img {
   display: block;
   height: 36px;
   width: 36px;
-  background: url(assets/icons/overlay/Quizlet.png) center/contain no-repeat;
+  background: url('Assets/icons/overlay/Quizlet.png') center/contain no-repeat;
 }
 
 .magister-img {
   display: block;
   height: 36px;
   width: 36px;
-  background: url(assets/icons/overlay/Magister.png) center/contain no-repeat;
+  background: url('Assets/icons/overlay/Magister.png') center/contain no-repeat;
 }
 
 .bestanden-img {
   display: block;
   height: 32px;
   width: 32px;
-  background: url(assets/icons/overlay/bestanden.png) center/contain no-repeat;
+  background: url('Assets/icons/overlay/bestanden.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="scheikunde"] {
-  background: url(assets/icons/text/scheikunde.png) center/contain no-repeat;
+  background: url('Assets/icons/text/scheikunde.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="latijn"] {
-  background: url(assets/icons/text/latijn.png) center/contain no-repeat;
+  background: url('Assets/icons/text/latijn.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="grieks"] {
-  background: url(assets/icons/text/grieks.png) center/contain no-repeat;
+  background: url('Assets/icons/text/grieks.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="aardrijkskunde"] {
-  background: url(assets/icons/text/aardrijkskunde.png) center/contain no-repeat;
+  background: url('Assets/icons/text/aardrijkskunde.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="nederlands"] {
-  background: url(assets/icons/text/nederlands.png) center/contain no-repeat;
+  background: url('Assets/icons/text/nederlands.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="geschiedenis"] {
-  background: url(assets/icons/text/geschiedenis.png) center/contain no-repeat;
+  background: url('Assets/icons/text/geschiedenis.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="frans"] {
-  background: url(assets/icons/text/frans.png) center/contain no-repeat;
+  background: url('Assets/icons/text/frans.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="duits"] {
-  background: url(assets/icons/text/duits.png) center/contain no-repeat;
+  background: url('Assets/icons/text/duits.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="wiskunde"] {
-  background: url(assets/icons/text/wiskunde.png) center/contain no-repeat;
+  background: url('Assets/icons/text/wiskunde.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="economie"] {
-  background: url(assets/icons/text/economie.png) center/contain no-repeat;
+  background: url('Assets/icons/text/economie.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="natuurkunde"] {
-  background: url(assets/icons/text/natuurkunde.png) center/contain no-repeat;
+  background: url('Assets/icons/text/natuurkunde.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="engels"] {
-  background: url(assets/icons/text/engels.png) center/contain no-repeat;
+  background: url('Assets/icons/text/engels.png') center/contain no-repeat;
   transform: scale(0.7);
 }
 
 .titel-img[data-ticon="waarschuwing"] {
-  background: url(assets/icons/waarschuwing.png) center/contain no-repeat;
+  background: url('Assets/icons/waarschuwing.png') center/contain no-repeat;
 }
