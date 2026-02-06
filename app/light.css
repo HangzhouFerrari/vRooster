@@ -235,6 +235,13 @@ h1 {
     box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9) inset, 
               -1px -1px 1px rgba(255, 255, 255, 0.9) inset,
               0px 0px 5px rgba(0, 0, 0, 0.1);
+    transition: all .3s cubic-bezier(.3,.55,.01,.99);
+}
+
+.lijst-item:active {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+  transition: all .1s ease;
 }
 
 .dag-img {
@@ -408,9 +415,10 @@ h1 {
   gap: 8px;
 }
 
-.overlay-close:hover {
-    background: rgba(255, 255, 255, 0.7);
-    transform: scale(1.02);
+.overlay-close:active {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+  transition: all .1s ease;
 }
 
 .overlay-content {
