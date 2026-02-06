@@ -256,51 +256,51 @@ h1 {
 }
 
 .dag-img[data-vak="sk"] {
-    background-image: url('Assets/donkere\ modus/icons/scheikunde.png');
+    background-image: url('Assets/donkere\ modus/Icons/scheikunde.png');
 }
 
 .dag-img[data-vak="fa"] {
-    background-image: url('Assets/donkere\ modus/icons/frans.png');
+    background-image: url('Assets/donkere\ modus/Icons/frans.png');
 }
 
 .dag-img[data-vak="la"] {
-    background-image: url('Assets/donkere\ modus/icons/latijn.png');
+    background-image: url('Assets/donkere\ modus/Icons/latijn.png');
 }
 
 .dag-img[data-vak="du"] {
-    background-image: url('Assets/donkere\ modus/icons/duits.png');
+    background-image: url('Assets/donkere\ modus/Icons/duits.png');
 }
 
 .dag-img[data-vak="gr"] {
-    background-image: url('Assets/donkere\ modus/icons/grieks.png');
+    background-image: url('Assets/donkere\ modus/Icons/grieks.png');
 }
 
 .dag-img[data-vak="wi"] {
-    background-image: url('Assets/donkere\ modus/icons/wiskunde.png');
+    background-image: url('Assets/donkere\ modus/Icons/wiskunde.png');
 }
 
 .dag-img[data-vak="ak"] {
-    background-image: url('Assets/donkere\ modus/icons/aardrijkskunde.png');
+    background-image: url('Assets/donkere\ modus/Icons/aardrijkskunde.png');
 }
 
 .dag-img[data-vak="ec"] {
-    background-image: url('Assets/donkere\ modus/icons/economie.png');
+    background-image: url('Assets/donkere\ modus/Icons/economie.png');
 }
 
 .dag-img[data-vak="ne"] {
-    background-image: url('Assets/donkere\ modus/icons/nederlands.png');
+    background-image: url('Assets/donkere\ modus/Icons/nederlands.png');
 }
 
 .dag-img[data-vak="na"] {
-    background-image: url('Assets/donkere\ modus/icons/natuurkunde.png');
+    background-image: url('Assets/donkere\ modus/Icons/natuurkunde.png');
 }
 
 .dag-img[data-vak="en"] {
-    background-image: url('Assets/donkere\ modus/icons/engels.png');
+    background-image: url('Assets/donkere\ modus/Icons/engels.png');
 }
 
 .dag-img[data-vak="gs"] {
-    background-image: url('Assets/donkere\ modus/icons/geschiedenis.png');
+    background-image: url('Assets/donkere\ modus/Icons/geschiedenis.png');
 }
 
 .lijst {
@@ -481,7 +481,7 @@ a {
   width: 36px;
   display: block;
   line-height: 0;
-  background: url('Assets/donkere\ modus/icons/ESC.png') center/cover no-repeat;
+  background: url('Assets/donkere\ modus/Icons/ESC.png') center/cover no-repeat;
 }
 
 .quizlet-img {
@@ -495,67 +495,67 @@ a {
   display: block;
   height: 36px;
   width: 36px;
-  background: url('Assets/donkere\ modus/icons/overlay/Magister.png') center/contain no-repeat;
+  background: url('Assets/donkere\ modus/Icons/overlay/Magister.png') center/contain no-repeat;
 }
 
 .bestanden-img {
   display: block;
   height: 32px;
   width: 32px;
-  background: url('Assets/donkere\ modus/icons/overlay/bestanden.png') center/contain no-repeat;
+  background: url('Assets/donkere\ modus/Icons/overlay/bestanden.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="scheikunde"] {
-  background: url('Assets/donkere\ modus/icons/text/scheikunde.png') center/contain no-repeat;
+  background: url('Assets/donkere\ modus/Icons/text/scheikunde.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="latijn"] {
-  background: url('Assets/donkere\ modus/icons/text/latijn.png') center/contain no-repeat;
+  background: url('Assets/donkere\ modus/Icons/text/latijn.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="grieks"] {
-  background: url('Assets/donkere\ modus/icons/text/grieks.png') center/contain no-repeat;
+  background: url('Assets/donkere\ modus/Icons/text/grieks.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="aardrijkskunde"] {
-  background: url('Assets/donkere\ modus/icons/text/aardrijkskunde.png') center/contain no-repeat;
+  background: url('Assets/donkere\ modus/Icons/text/aardrijkskunde.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="nederlands"] {
-  background: url('Assets/donkere\ modus/icons/text/nederlands.png') center/contain no-repeat;
+  background: url('Assets/donkere\ modus/Icons/text/nederlands.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="geschiedenis"] {
-  background: url('Assets/donkere\ modus/icons/text/geschiedenis.png') center/contain no-repeat;
+  background: url('Assets/donkere\ modus/Icons/text/geschiedenis.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="frans"] {
-  background: url('Assets/donkere\ modus/icons/text/frans.png') center/contain no-repeat;
+  background: url('Assets/donkere\ modus/Icons/text/frans.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="duits"] {
-  background: url('Assets/donkere\ modus/icons/text/duits.png') center/contain no-repeat;
+  background: url('Assets/donkere\ modus/Icons/text/duits.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="wiskunde"] {
-  background: url('Assets/donkere\ modus/icons/text/wiskunde.png') center/contain no-repeat;
+  background: url('Assets/donkere\ modus/Icons/text/wiskunde.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="economie"] {
-  background: url('Assets/donkere\ modus/icons/text/economie.png') center/contain no-repeat;
+  background: url('Assets/donkere\ modus/Icons/text/economie.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="natuurkunde"] {
-  background: url('Assets/donkere\ modus/icons/text/natuurkunde.png') center/contain no-repeat;
+  background: url('Assets/donkere\ modus/Icons/text/natuurkunde.png') center/contain no-repeat;
 }
 
 .titel-img[data-ticon="engels"] {
-  background: url('Assets/donkere\ modus/icons/text/engels.png') center/contain no-repeat;
+  background: url('Assets/donkere\ modus/Icons/text/engels.png') center/contain no-repeat;
   transform: scale(0.7);
 }
 
 .titel-img[data-ticon="waarschuwing"] {
-  background: url('Assets/donkere\ modus/icons/waarschuwing.png') center/contain no-repeat;
+  background: url('Assets/donkere\ modus/Icons/waarschuwing.png') center/contain no-repeat;
 }
 
 .titel-img {
@@ -598,11 +598,11 @@ a {
 }
 
 .stngs-img[data-sicon="donkere-modus"] {
-    background-image: url('Assets/donkere\ modus/icons/donkeremodus.png');
+    background-image: url('Assets/donkere\ modus/Icons/donkeremodus.png');
 }
 
 .stngs-img[data-sicon="info"] {
-    background-image: url('Assets/donkere\ modus/icons/info.png');
+    background-image: url('Assets/donkere\ modus/Icons/info.png');
 }
 
 .stngs-title {
@@ -627,7 +627,7 @@ a {
 }
 
 .stngs-toggle {
-  background-image: url('Assets/donkere\ modus/icons/toggle.png');
+  background-image: url('Assets/donkere\ modus/Icons/toggle.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
