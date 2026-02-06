@@ -107,19 +107,19 @@ h1 {
 }
 
 .nav-item[data-nav-name="home"] {
-    background-image: url('Assets/donkere\ modus/icons/nav/home-inactive.png');
+    background-image: url('Assets/donkere\ modus/Icons/nav/home-inactive.png');
 }
 
 .nav-item[data-nav-name="settings"] {
-    background-image: url('Assets/donkere\ modus/icons/nav/settings-inactive.png');
+    background-image: url('Assets/donkere\ modus/Icons/nav/settings-inactive.png');
 }
 
 .nav-item[data-nav-name="home"][data-active="1"] {
-    background-image: url('Assets/donkere\ modus/icons/nav/home-active.png') !important;
+    background-image: url('Assets/donkere\ modus/Icons/nav/home-active.png') !important;
 }
 
 .nav-item[data-nav-name="settings"][data-active="1"] {
-    background-image: url('Assets/donkere\ modus/icons/nav/settings-active.png') !important;
+    background-image: url('Assets/donkere\ modus/Icons/nav/settings-active.png') !important;
 }
 
 .nav-button {
