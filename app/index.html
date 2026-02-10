@@ -520,4 +520,16 @@ document.addEventListener('DOMContentLoaded', updateActiveDag);
   });
 });
 </script>
+<script>
+  function applyStoredTheme() {
+    const themeLink = document.getElementById("themeStylesheet");
+    if (!themeLink) return;
+
+    const savedTheme = localStorage.getItem("theme");
+    themeLink.setAttribute("href", savedTheme === "dark" ? "dark.css" : "light.css");
+  }
+
+  document.addEventListener("DOMContentLoaded", applyStoredTheme);
+  window.addEventListener("pageshow", applyStoredTheme);
+</script>
 </html>
