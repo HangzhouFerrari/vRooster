@@ -642,3 +642,124 @@ a {
   flex-direction: column;
   gap: clamp(10px, 2vh, 15px);
 }
+
+.overlay-session {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(242, 241, 247, 1);
+  backdrop-filter: blur(4px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease;
+  z-index: 9;
+  perspective: 1000px;
+}
+.overlay-session.active {
+  visibility: visible;
+  opacity: 1;
+}
+.overlay-session-panel {
+  background: #f2f1f7;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  color: #0c0c0c;
+  width: 100%;
+  padding: 5px 5px;
+  transform: scale(2.0);
+  border-radius: 50px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all .6s cubic-bezier(.3,.55,.01,.99);
+  overflow: auto;
+  overflow-X: hidden;
+  justify-content: center;
+}
+.overlay-session.active .overlay-session-panel { 
+  border-radius: 50px; 
+  transform: scale(1.0); 
+}
+
+.overlay-session-header { display:flex; align-items: center; justify-content: center; gap:12px; text-align: left; margin-top:10px; }
+.overlay-session-title { flex-direction: column; display: flex; align-items: flex-start; gap: 8px; font-family: 'DM Sans', sans-serif; font-size: clamp(42px, 5vw, 62px); font-weight: 800; margin:0; margin-bottom: 20px; }
+.overlay-subtitle { font-family: 'DM Sans', sans-serif; font-size: 18px; color: rgba(0, 0, 0, 0.8); margin-top:6px; }
+.overlay-session-body { margin-top: 12px; display:flex; gap:20px; flex-wrap:wrap; height: 80px; margin-bottom: 30px;}
+.overlay-session-close {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.50) 100%);
+  cursor: pointer;
+  user-select: none;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9) inset, 
+              -1px -1px 1px rgba(255, 255, 255, 0.9) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'DM Sans', sans-serif;
+  border-radius: 20px;
+  font-weight: 700;
+  aspect-ratio: 1 / 1;
+  height: 50px;
+  width: 100%;
+  padding: 0 16px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 20px;
+}
+
+.overlay-close:active {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+  transition: all .1s ease;
+}
+
+.overlay-session-content {
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+}
+.overlay-session-btn {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.50) 100%);
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9) inset, 
+              -1px -1px 1px rgba(255, 255, 255, 0.9) inset,
+              0px 0px 5px rgba(0, 0, 0, 0.1);
+  color: #000;
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.3s cubic-bezier(0,0,.47,1.15);
+  width: 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  color: #fff;
+}
+
+.titel-session-img {
+  background: url('Assets/icons/SESSION_EXPIRED.png') center/contain no-repeat;
+}
+
+.titel-session-img {
+  aspect-ratio: 1 / 1;
+  width: clamp(80px, 6vw, 100px);
+  height: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  flex-shrink: 0;
+}

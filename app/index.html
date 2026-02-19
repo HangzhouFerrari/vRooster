@@ -520,4 +520,36 @@ document.addEventListener('DOMContentLoaded', updateActiveDag);
   });
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.getElementById("overlay-100");
+  if (!overlay) return;
+
+  // ====== DATUM INSTELLEN ======
+  // Jaar, maand (0-based!), dag
+  const startDatum = new Date(2026, 1, 19); // 13 februari 2026
+  const eindDatum  = new Date(2027, 1, 19); // 20 februari 2026
+  // ==============================
+
+  const vandaag = new Date();
+
+  // Zet tijd op 00:00 zodat alleen datum telt
+  vandaag.setHours(0,0,0,0);
+
+  if (vandaag >= startDatum && vandaag <= eindDatum) {
+    overlay.classList.add("active");
+    overlay.setAttribute("aria-hidden", "false");
+  }
+});
+</script>
+<script>
+document.querySelector('.overlay-session-close')
+  ?.addEventListener('click', function () {
+    const overlay = document.getElementById("overlay-100");
+    if (!overlay) return;
+
+    overlay.classList.remove("active");
+    overlay.setAttribute("aria-hidden", "true");
+});
+</script>
 </html>
