@@ -713,6 +713,7 @@ a {
   justify-content: center;
   gap: 8px;
   font-size: 20px;
+  color: #000;
 }
 
 .overlay-close:active {
